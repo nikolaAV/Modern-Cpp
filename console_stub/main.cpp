@@ -4,10 +4,9 @@
 
 using namespace std;
 
-int main(int /*argc*/, char** /*argv[]*/)
+int main()
 {
 	cout << compiler::greeting() << endl;
     cout << "Press any key + <enter> to exit" << endl;
 	cin.get();
-	return 0;
 }

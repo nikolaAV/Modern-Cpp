@@ -35,6 +35,9 @@
 *.opensdf
 *.ncb
 
+# Bloodshed Dev-C++ IDE temp/user files
+Makefile.win
+
 # Build output directories
 Release
 Debug

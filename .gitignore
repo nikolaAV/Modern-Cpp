@@ -37,6 +37,8 @@
 
 # Bloodshed Dev-C++ IDE temp/user files
 Makefile.win
+*.layout
+
 
 # Build output directories
 Release

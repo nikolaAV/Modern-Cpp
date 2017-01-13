@@ -1,6 +1,6 @@
 [Project]
-FileName=stub-511.dev
-Name=stub
+FileName=bloodshed511.dev
+Name=test
 Type=1
 Ver=2
 ObjFiles=
@@ -16,10 +16,10 @@ IsCpp=1
 Icon=
 ExeOutput=Release
 ObjectOutput=Release
-LogOutput=
-LogOutputEnabled=0
-OverrideOutput=0
-OverrideOutputName=stub-511.exe
+LogOutput=Release
+LogOutputEnabled=1
+OverrideOutput=1
+OverrideOutputName=test.exe
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=

@@ -5,4 +5,4 @@ Further Information
 * [Perfect forwarding and universal references in C++](http://eli.thegreenplace.net/2014/perfect-forwarding-and-universal-references-in-c/) by Eli Bendersky
 
 ## Related links
-* see 'lambda_block_on_exit' subproject in [Modern-Cpp](https://github.com/nikolaAV/Modern-Cpp.git)
+* see 'rvalue' subproject in [Modern-Cpp](https://github.com/nikolaAV/Modern-Cpp.git)

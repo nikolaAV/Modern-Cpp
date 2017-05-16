@@ -6,3 +6,4 @@ Further Information
 
 ## Related links
 * see 'rvalue' subproject in [Modern-Cpp](https://github.com/nikolaAV/Modern-Cpp.git)
+* [Modern-Cpp,universal delegate] (https://github.com/nikolaAV/Modern-Cpp.git) 

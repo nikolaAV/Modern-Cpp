@@ -7,11 +7,11 @@ namespace compiler
 {
 
 #ifdef _MSC_VER
-    template <size_t>   const char* visual_studio_title()       { return "???"; };
-    template <>         const char* visual_studio_title<1700>() { return "VS 2012"; }
-    template <>         const char* visual_studio_title<1800>() { return "VS 2013"; }
-    template <>         const char* visual_studio_title<1900>() { return "VS 2015"; }
-	template <>         const char* visual_studio_title<1910>() { return "VS 2017"; }
+   template <size_t>   constexpr const char* visual_studio_title()       { return "???"; };
+   template <>         constexpr const char* visual_studio_title<1700>() { return "VS 2012"; }
+   template <>         constexpr const char* visual_studio_title<1800>() { return "VS 2013"; }
+   template <>         constexpr const char* visual_studio_title<1900>() { return "VS 2015"; }
+	template <>         constexpr const char* visual_studio_title<1910>() { return "VS 2017"; }
 #endif
 
 	static std::string greeting()

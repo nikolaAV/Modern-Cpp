@@ -1,0 +1,55 @@
+# Unpacking & enumerating Tuples in C++14
+Some useful primitives to deal with tuples in generic fashion.
+
+## decltype(auto) take_front<N>(Tuple&& t)
+takes an arbitrary tuple and returns a new tuple that holds the first N elements of the original tuple
+```cpp
+   auto t = take_front<2>(std::make_tuple(1, 2, 3, 4));
+   assert(t == std::make_tuple(1, 2));
+```
+
+## decltype(auto) take_back<N>(Tuple&& t)
+takes an arbitrary tuple and returns a new tuple that holds the last N elements of the original tuple in reversed ordering
+```cpp
+   auto t = take_back<2>(std::make_tuple(1, 2, 3, 4));
+   assert(t == std::make_tuple(4, 3));
+```
+
+## decltype(auto) reverse(Tuple&& t)
+takes a tuple and returns a new tuple that contains the original tuple’s elements in reversed order
+```cpp
+   auto t = treverse(std::make_tuple(1, 2, 3, 4));
+   assert(t == std::make_tuple(4, 3, 2, 1));
+```
+
+## decltype(auto) apply(F&& f, Tuple&& t)
+takes a callable (f) and a tuple (t) and calls the callable with the elements of the tuple as arguments
+```cpp
+   int sum(int a0, int a1, int a2, int a3)
+   {
+      return  a0 + a1 + a2 + a3;
+   }
+   auto t = apply(sum,std::make_tuple(1, 2, 3, 4));
+   assert(10 == t);
+```
+
+## decltype(auto) for_each(F&& f, Tuple&& t)
+takes a callable (f) and a tuple (t) and calls the callable with the each element in a row in ordering elements of the tuple
+```cpp
+   struct sum
+   {
+      int value = 0;
+      void operator()(int v) { value += v; }
+   };
+   auto t = for_each(sum3{},std::make_tuple(1, 2, 3, 4));
+   assert(10 == t.value);
+```
+
+
+# Related links
+* [Unpacking Tuples in C++14](http://aherrmann.github.io/programming/2016/02/28/unpacking-tuples-in-cpp14/) by Andreas Herrmann
+* [std::apply, since C++17](http://en.cppreference.com/w/cpp/utility/apply) 
+* [How can I iterate over a tuple](https://stackoverflow.com/questions/1198260/iterate-over-tuple) on stackoverflow.com
+
+## Supported Compilers
+* Microsoft (R) C/C++ Optimizing Compiler Version 19.10.xyz ([Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-express/))

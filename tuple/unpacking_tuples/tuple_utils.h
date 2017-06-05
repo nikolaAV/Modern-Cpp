@@ -90,14 +90,31 @@ constexpr
 typename std::enable_if<I<sizeof...(Tp),std::decay_t<F>>::type 
 for_each(F&& f, std::tuple<Tp...>&& t)
 {
-   std::forward<F>(f)(std::get<I>(std::forward<std::tuple<Tp...>>(t)));
-   return for_each<I+1>(std::forward<F>(f),std::forward<std::tuple<Tp...>>(t));
+   f(std::get<I>(t));
+   return for_each<I+1>(std::forward<F>(f),std::move(t));
 }
 
 template < size_t I = 0, typename F, typename... Tp>
 constexpr 
 typename std::enable_if<I==sizeof...(Tp),std::decay_t<F>>::type 
-for_each(F&& f, std::tuple<Tp...> t)
+for_each(F&& f, std::tuple<Tp...>&&)
+{
+   return f;
+}
+
+template < size_t I = 0, typename F, typename... Tp>
+constexpr 
+typename std::enable_if<I<sizeof...(Tp),std::decay_t<F>>::type 
+for_each(F&& f, const std::tuple<Tp...>& t)
+{
+   f(std::get<I>(t));
+   return for_each<I+1>(std::forward<F>(f),t);
+}
+
+template < size_t I = 0, typename F, typename... Tp>
+constexpr 
+typename std::enable_if<I==sizeof...(Tp),std::decay_t<F>>::type 
+for_each(F&& f, const std::tuple<Tp...>&)
 {
    return f;
 }

@@ -50,6 +50,7 @@ takes a callable (f) and a tuple (t) and calls the callable with the each elemen
 * [Unpacking Tuples in C++14](http://aherrmann.github.io/programming/2016/02/28/unpacking-tuples-in-cpp14/) by Andreas Herrmann
 * [std::apply, since C++17](http://en.cppreference.com/w/cpp/utility/apply) 
 * [How can I iterate over a tuple](https://stackoverflow.com/questions/1198260/iterate-over-tuple) on stackoverflow.com
+* [Enumerating elements of different types in a heterogeneous container (C++17)](https://github.com/nikolaAV/Modern-Cpp/tree/master/variant/heterogeneous_container) by nikolaAV on GitHub
 
 ## Supported Compilers
 * Microsoft (R) C/C++ Optimizing Compiler Version 19.10.xyz ([Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-express/))

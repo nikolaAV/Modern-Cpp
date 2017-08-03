@@ -12,10 +12,10 @@ using namespace std;
 template <typename Function, typename... Args>
 inline 
 typename std::result_of<Function(Args...)>::type
-call(Function&& f, Args... args)
+call(Function&& f, Args&&... args)
 {
     // prologue, std::lock_guard<std::mutex> lock(g_i_mutex); as example 
-    return f(std::forward<Args>(args)...);
+    return std::forward<Function>(f)(std::forward<Args>(args)...);
     // epilogue
 }
 

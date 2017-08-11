@@ -21,7 +21,7 @@ decltype(auto)
 delegate_call(Function&& f, Args&&... args)
 {
    // lambda signatute: T(void)
-   auto lambda = [f=std::move(f),a=std::make_tuple(std::forward<Args>(args)...)]() { 
+   auto lambda = [f=std::forward<Function>(f),a=std::make_tuple(std::forward<Args>(args)...)]() { 
       return tu::apply(std::move(f),std::move(a));
    };
    // this lambda can be moved into suitable place where it can be triggered later

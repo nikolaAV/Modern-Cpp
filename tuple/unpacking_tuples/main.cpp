@@ -40,4 +40,5 @@ int main()
 
    std::cout << "Press any key + <enter> to exit" << std::endl;
    std::cin.get();
+   return 0;
 }

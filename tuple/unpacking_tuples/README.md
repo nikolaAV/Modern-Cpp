@@ -45,6 +45,46 @@ takes a callable (f) and a tuple (t) and calls the callable with the each elemen
    assert(10 == t.value);
 ```
 
+## How to pass various number of arguments of any type into a lambda
+```cpp
+template <typename Function, typename... Args>
+inline 
+decltype(auto)
+delegate_call(Function&& f, Args&&... args)
+{
+   // lambda signatute: T(void)
+   auto lambda = [f=std::move(f),a=std::make_tuple(std::forward<Args>(args)...)]() { 
+      return tu::apply(std::move(f),std::move(a));
+   };
+   // this lambda can be moved into suitable place where it can be triggered later
+   // ...
+   return lambda();
+}
+```
+* Let's suppose there is a function with signatute: T **fn**(Arg1,Arg2,...)
+* we need to delegate it for further invocation: T delegate(**fn**,Arg1,Arg2,...)
+* so, we pack input arguments (Arg1,Arg2,...) into a singular object of `std::tuple`<Arg1,Arg2,...> type
+* create a lambda expression ( signature -> T( **void** ) ) which
+    * captures the input argument pack (`std::tuple`) by means **moving(!!!)**
+    * in lambda's body, we unpack this pack (`std::tuple`) back
+    * call the original **fn**
+    * and return the value returned by the **fn**
+
+Example of usage:
+```cpp
+auto foo(int& v1, int& v2) 
+{
+   const auto r = make_pair(v1,v2);
+   v1 = v2 = 0;
+   return r;
+}
+
+int v1{1}, v2{2};
+auto ret = delegate_call(foo2,ref(v1),ref(v2));
+assert(1==ret.first && 2==ret.second);
+assert(0==v1 && 0==v2);
+```
+
 
 # Related links
 * [Unpacking Tuples in C++14](http://aherrmann.github.io/programming/2016/02/28/unpacking-tuples-in-cpp14/) by Andreas Herrmann

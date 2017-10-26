@@ -7,7 +7,6 @@
 
 using namespace std;
 
-
 inline string str(bool in)
 {
     return in? "1" : "0";
@@ -92,7 +91,28 @@ namespace argument_list
 
 } // argument_list
 
+namespace fold_expressions // since C++17
+{
+   // http://en.cppreference.com/w/cpp/language/fold
+   // http://scrutator.me/post/2017/08/11/cpp17_lang_features_p1.aspx
 
+	template <bool... bits>
+	string test1() // unary left fold with 'comma' operator 
+	{
+		string out;
+		(... ,(out+=str(bits)));
+		return out;
+	}
+
+	template <bool... bits>
+	string test2() // binary left fold with operator +=
+	{
+		string out;
+      (out += ... += str(bits));
+		return out;
+	}
+
+}
 
 int main(int /*argc*/, char** /*argv[]*/)
 {
@@ -100,6 +120,8 @@ int main(int /*argc*/, char** /*argv[]*/)
 	cout << "recursion_function: " << recursion_function::test<1, 1, true, false, 0, 1, false>() << endl;
 	cout << "initr_list: " << init_list::test<1, 1, true, false, 0, 1, false>() << endl;
 	cout << "argument_list: " << argument_list::test<1, 1, true, false, 0, 1, false>() << endl;
+	cout << "fold_expressions [unary left]: " << fold_expressions::test1<1, 1, true, false, 0, 1, false>() << endl;
+	cout << "fold_expressions [binary left]: " << fold_expressions::test2<1, 1, true, false, 0, 1, false>() << endl;
 
     cout << "Press any key + <enter> to exit" << endl;
     cin.get();

@@ -1,15 +1,14 @@
 # Adding C++17 structured bindings support to your classes
 
-C++17 adds [structured bindings](https://isocpp.org/files/papers/P0144R1.pdf) for 
-
-- tuple-like objects (`std\::tuple`, `std\::pair`)
+C++17 adds [structured bindings](https://isocpp.org/files/papers/P0144R1.pdf) for
+- tuple-like objects (`std::tuple`, `std::pair`)
 - classes where __all__ the non-static member are _public_ or all public-only non-static members are in a single direct base class.   
 
 Any other complex classes need additional code to be decomposed.
 All you need to do is tell the compiler 
-- 1) how many variables you want to expose
-- 2) the types of them
-- 3) how to get at the values.
+1) how many variables you want to expose
+2) the types of them
+3) how to get at the values.
 
 ```cpp
 class my_type {

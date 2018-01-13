@@ -5,4 +5,4 @@
 
 
 ## Related links
-* see 'forwarding reference' subproject in [Modern-Cpp](https://github.com/nikolaAV/Modern-Cpp.git)
+* [Modern-Cpp::forwarding-reference](https://github.com/nikolaAV/Modern-Cpp/tree/master/forwarding-reference)

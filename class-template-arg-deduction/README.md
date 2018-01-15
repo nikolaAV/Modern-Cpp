@@ -1,4 +1,4 @@
-# C++17 Feature – Class Template Argument Deduction
+# C++17 Feature â€“ Class Template Argument Deduction
 With C++17, we get class template argument deduction. It is based on template argument deduction for function templates and allows us to get rid of the need for clumsy make_XXX functions.
 
 ```cpp
@@ -15,7 +15,7 @@ With C++17, we get class template argument deduction. It is based on template ar
 	// will store two elements of 'std::string' type
 ```
 
-Further Information
+## Further informations
 * [Class Template Argument Deduction](https://arne-mertz.de/2017/06/class-template-argument-deduction/) by Arne Mertz
 * [Template argument deduction for class templates](http://www.bfilipek.com/2017/01/cpp17features.html#template-argument-deduction-for-class-templates) by Bartlomiej Filipek
 

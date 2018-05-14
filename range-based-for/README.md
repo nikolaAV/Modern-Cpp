@@ -37,9 +37,22 @@ The following [example](https://github.com/nikolaAV/Modern-Cpp/blob/master/range
         for (auto v:c2) ...;
 ```
 
+# range-based for in reversed direction
+
+Example of an implementation of a reversing container adapter like [boost\::adaptor\::reverse](https://www.boost.org/doc/libs/1_56_0/libs/range/doc/html/range/reference/adaptors/reference/reversed.html#range.reference.adaptors.reference.reversed.reversed_example). The key observation is that __ranged-based for-loops__ works by relying on _begin()_ and _end()_ free-standing functions in order to acquire the range's iterators. If we implement our owns we will be able to sumbstitute forward iterators for bacward ones. Thanks to ADL, one doesn't even need to define these custom begin() and end() in the _std::_ namespace.
+```cpp
+int main()
+{
+   for(auto val:reversed({1,2,3,4,5,6,7,8,9}))
+      cout << val;
+}
+```
+
 ## Further informations
 * [Range-based for loop](http://en.cppreference.com/w/cpp/language/range-for) on cppreference.com
 * [Using 'range-based for' on your own collection classes](https://mbevin.wordpress.com/2012/11/14/range-based-for/) by Michael Bevin
+* [boost\::adaptors\::reverse](https://www.boost.org/doc/libs/1_56_0/libs/range/doc/html/range/reference/adaptors/reference/reversed.html#range.reference.adaptors.reference.reversed.reversed_example)
+* [reverse range-based for-loop](https://stackoverflow.com/questions/8542591/c11-reverse-range-based-for-loop) on stackoverflow
 
 ## Related links
 * TBD

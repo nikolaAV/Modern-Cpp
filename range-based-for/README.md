@@ -15,7 +15,7 @@ The following [example](https://github.com/nikolaAV/Modern-Cpp/blob/master/range
    };
 
    /**
-      Approach 2. Free-standign functions
+      Approach 2. Free-standing functions
    */
    template <typename T>
    struct my_container_2

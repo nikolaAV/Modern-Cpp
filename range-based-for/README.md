@@ -39,7 +39,7 @@ The following [example](https://github.com/nikolaAV/Modern-Cpp/blob/master/range
 
 # range-based for in reversed direction
 
-Example of an implementation of a reversing container adapter like [boost\::adaptor\::reverse](https://www.boost.org/doc/libs/1_56_0/libs/range/doc/html/range/reference/adaptors/reference/reversed.html#range.reference.adaptors.reference.reversed.reversed_example). The key observation is that __ranged-based for-loops__ works by relying on _begin()_ and _end()_ free-standing functions in order to acquire the range's iterators. If we implement our owns we will be able to substitute forward iterators for bacward ones. Thanks to ADL, one doesn't even need to define these custom begin() and end() in the _std::_ namespace.
+Example of an implementation of a reversing container adapter like [boost\::adaptor\::reverse](https://www.boost.org/doc/libs/1_56_0/libs/range/doc/html/range/reference/adaptors/reference/reversed.html#range.reference.adaptors.reference.reversed.reversed_example). The key observation is that __ranged-based for-loops__ works by relying on _begin()_ and _end()_ free-standing functions in order to acquire the range's iterators. If we [implement our owns](https://github.com/nikolaAV/Modern-Cpp/blob/master/range-based-for/reversed_range.cpp) we will be able to substitute forward iterators for bacward ones. Thanks to ADL, one doesn't even need to define these custom begin() and end() in the _std::_ namespace.
 ```cpp
 int main()
 {

@@ -32,6 +32,7 @@ int main()
 
 ## Related links
 * [Unpacking & enumerating Tuples in C++14](https://github.com/nikolaAV/Modern-Cpp/tree/master/tuple/unpacking_tuples) by nikolaAV on GitHub
+* [Wrapping lambdas into std::function](https://github.com/nikolaAV/Modern-Cpp/blob/master/function/wrapping_lambdas/README.md) 
 
 ## Supported Compilers
 * Microsoft (R) C/C++ Optimizing Compiler Version 19.10.xyz with option /std:c++latest ([Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-express/))

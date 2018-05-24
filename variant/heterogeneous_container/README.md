@@ -1,4 +1,5 @@
 # Enumerating elements of different types in a heterogeneous container (C++17)
+The code example below demonstrates how elements of different types can be stored in one container like it can be done in OOP using polymorphic types. 
 ```cpp
 struct circle
 {
@@ -25,9 +26,11 @@ int main()
       visit([](auto s) {cout << s.draw() << endl;}, s );
 ```
 
-# Related links
+## Further informations
 * [Original Article](https://habrahabr.ru/post/332084/) by JegernOUTT
 * [std::visit](http://en.cppreference.com/w/cpp/utility/variant/visit) 
+
+## Related links
 * [Unpacking & enumerating Tuples in C++14](https://github.com/nikolaAV/Modern-Cpp/tree/master/tuple/unpacking_tuples) by nikolaAV on GitHub
 
 ## Supported Compilers

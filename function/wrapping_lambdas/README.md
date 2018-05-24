@@ -1,5 +1,5 @@
 ﻿# Adding polymorphy by wrapping lambdas into std::function
-It's natural that a STL container can't store completely different types if it has been  parametrized by the particular type. But however C++ allows the user to store any kind of function object, __only constraining to the call interface__, which takes a specific set of parameters. Example below illustrate how to solve this problem using std::function, which can act as a polymorphic wrapper around any lambda expression, __no matter if and what it captures__. 
+It's natural that a STL container can't store completely different types if it has been  parametrized by the particular type. But however C++ allows the user to store any kind of function object, __only constraining to the call interface__, which takes a specific set of parameters. Example below illustrate how to solve this problem using `std::function`, which can act as a polymorphic wrapper around any lambda expression, __no matter if and what it captures__. 
 ```cpp
 struct circle
 {

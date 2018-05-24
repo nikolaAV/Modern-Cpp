@@ -1,28 +1,28 @@
 # Unpacking & enumerating Tuples in C++14
 Some useful primitives to deal with tuples in generic fashion.
 
-## decltype(auto) take_front<N>(Tuple&& t)
+### decltype(auto) take_front<N>(Tuple&& t)
 takes an arbitrary tuple and returns a new tuple that holds the first N elements of the original tuple
 ```cpp
    auto t = take_front<2>(std::make_tuple(1, 2, 3, 4));
    assert(t == std::make_tuple(1, 2));
 ```
 
-## decltype(auto) take_back<N>(Tuple&& t)
+### decltype(auto) take_back<N>(Tuple&& t)
 takes an arbitrary tuple and returns a new tuple that holds the last N elements of the original tuple in reversed ordering
 ```cpp
    auto t = take_back<2>(std::make_tuple(1, 2, 3, 4));
    assert(t == std::make_tuple(4, 3));
 ```
 
-## decltype(auto) reverse(Tuple&& t)
-takes a tuple and returns a new tuple that contains the original tuple’s elements in reversed order
+### decltype(auto) reverse(Tuple&& t)
+takes a tuple and returns a new tuple that contains the original tupleâ€™s elements in reversed order
 ```cpp
    auto t = treverse(std::make_tuple(1, 2, 3, 4));
    assert(t == std::make_tuple(4, 3, 2, 1));
 ```
 
-## decltype(auto) apply(F&& f, Tuple&& t)
+### decltype(auto) apply(F&& f, Tuple&& t)
 takes a callable (f) and a tuple (t) and calls the callable with the elements of the tuple as arguments
 ```cpp
    int sum(int a0, int a1, int a2, int a3)
@@ -33,7 +33,7 @@ takes a callable (f) and a tuple (t) and calls the callable with the elements of
    assert(10 == t);
 ```
 
-## decltype(auto) for_each(F&& f, Tuple&& t)
+### decltype(auto) for_each(F&& f, Tuple&& t)
 takes a callable (f) and a tuple (t) and calls the callable with the each element in a row in ordering elements of the tuple
 ```cpp
    struct sum
@@ -45,7 +45,7 @@ takes a callable (f) and a tuple (t) and calls the callable with the each elemen
    assert(10 == t.value);
 ```
 
-## How to pass various number of arguments of any type into a lambda
+### How to pass various number of arguments of any type into a lambda
 ```cpp
 template <typename Function, typename... Args>
 inline 
@@ -85,11 +85,12 @@ assert(1==ret.first && 2==ret.second);
 assert(0==v1 && 0==v2);
 ```
 
-
-# Related links
+## Further informations
 * [Unpacking Tuples in C++14](http://aherrmann.github.io/programming/2016/02/28/unpacking-tuples-in-cpp14/) by Andreas Herrmann
 * [std::apply, since C++17](http://en.cppreference.com/w/cpp/utility/apply) 
 * [How can I iterate over a tuple](https://stackoverflow.com/questions/1198260/iterate-over-tuple) on stackoverflow.com
+
+## Related links
 * [Enumerating elements of different types in a heterogeneous container (C++17)](https://github.com/nikolaAV/Modern-Cpp/tree/master/variant/heterogeneous_container) by nikolaAV on GitHub
 
 ## Supported Compilers

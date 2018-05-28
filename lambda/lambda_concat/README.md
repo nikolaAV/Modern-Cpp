@@ -21,7 +21,7 @@ Let's suppose there are three free-standing functions: `f`, `g` and `h` and the 
 * [Элементы функционального программирования в C++](https://habr.com/post/328624/) by Дмитрий Изволов
 
 ## Related links
-* TBD
+* [Predicates with logical conjunction & disjunction based on lambda expression](https://github.com/nikolaAV/Modern-Cpp/tree/master/lambda/lambda_combine#creating-complex-predicates-with-logical-conjunction---disjunction)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

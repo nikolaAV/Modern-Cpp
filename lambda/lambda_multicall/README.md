@@ -30,8 +30,8 @@ auto make = [](auto... funcs) {
 };
 ```
 No eny extra data structures are required, so the compiler has a single job to generate a binary without overhead.
-Function `multicall::make` accepts an arbitrary number of functions as parameters and returns a lambda expression that also acceppts an arbitrary number of parameters.
-This way, we can define auto `auto call_all = multicall::make(f1,f2,f3);`, and then invocation of `call_all("Hello, World!");` leads to a sequence of calls: `f1("Hello, World!");`,`f2("Hello, World!");`,`f3("Hello, World!");`.  
+Function `multicall::make` accepts an arbitrary number of functions as parameters and returns a lambda expression that also accepts an arbitrary number of parameters.
+This way, we can define `auto call_all = multicall::make(f1,f2,f3);`, and then invocation of `call_all("Hello, World!");` leads to a sequence of calls: `f1("Hello, World!");`,`f2("Hello, World!");`,`f3("Hello, World!");`.  
 
 ## Further informations
 * TBD

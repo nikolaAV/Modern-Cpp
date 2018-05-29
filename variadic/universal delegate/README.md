@@ -46,4 +46,5 @@ call(Function&& f, Args... args)
 
 ## Related links
 * [Modern-Cpp::forwarding-reference](https://github.com/nikolaAV/Modern-Cpp/tree/master/forwarding-reference) 
+* [Multicall with the same input](https://github.com/nikolaAV/Modern-Cpp/tree/master/lambda/lambda_multicall)
 

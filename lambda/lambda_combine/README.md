@@ -27,7 +27,8 @@ int main()
 * [std::logical_and](https://en.cppreference.com/w/cpp/utility/functional/logical_and), [std::logical_or](https://en.cppreference.com/w/cpp/utility/functional/logical_or)
 
 ## Related links
-* [function concatenation with lambda expression](https://github.com/nikolaAV/Modern-Cpp/blob/master/lambda/lambda_concat/README.md#function-concatenation-with-lambda-expression)
+* [function concatenation with lambda expression](../lambda_concat/README.md#function-concatenation-with-lambda-expression)
+* [Multicall](../lambda_multicall#callling-multiple-functions-with-the-same-input)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

@@ -16,9 +16,12 @@ It can be done by means expansion of parameter pack 'bits' with several ways:
 * brace-enclosed initializers
 * fold-expressions (since C++17)
  
-### Related links
+### Further informations
 * [cppreference.com::parameter_pack](http://en.cppreference.com/w/cpp/language/parameter_pack)
 * [C++17, New Features](http://scrutator.me/post/2017/08/11/cpp17_lang_features_p1.aspx) by Evgeniy Shcherbina
+
+### Related links
+TBD
 
 ## Inheritance Generation
 

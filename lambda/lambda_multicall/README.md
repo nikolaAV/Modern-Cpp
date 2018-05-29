@@ -37,8 +37,8 @@ This way, we can define `auto call_all = multicall::make(f1,f2,f3);`, and then i
 * TBD
 
 ## Related links
-* [Universal Delegate (Function Call Wrapper)](https://github.com/nikolaAV/Modern-Cpp/blob/master/variadic/universal%20delegate/README.md#callfunctionargs)
-* [Function Concatenation)](../lambda_concat#function-concatenation-with-lambda-expression)
+* [Universal Delegate (Function Call Wrapper)](../../variadic/universal%20delegate/README.md#callfunctionargs)
+* [Function Concatenation](../lambda_concat#function-concatenation-with-lambda-expression)
 
 
 ## Compilers

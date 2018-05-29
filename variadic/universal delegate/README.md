@@ -41,5 +41,9 @@ call(Function&& f, Args... args)
 }
 ```
 
-# Related links
+## Further informations
+* TBD
+
+## Related links
 * [Modern-Cpp::forwarding-reference](https://github.com/nikolaAV/Modern-Cpp/tree/master/forwarding-reference) 
+

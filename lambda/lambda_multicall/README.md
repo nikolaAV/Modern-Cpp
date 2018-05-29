@@ -39,6 +39,7 @@ This way, we can define `auto call_all = multicall::make(f1,f2,f3);`, and then i
 ## Related links
 * [Universal Delegate (Function Call Wrapper)](../../variadic/universal%20delegate/README.md#callfunctionargs)
 * [Function Concatenation](../lambda_concat#function-concatenation-with-lambda-expression)
+* [Logical conjunction & disjunction](../lambda_combine#creating-complex-predicates-with-logical-conjunction---disjunction)
 
 
 ## Compilers

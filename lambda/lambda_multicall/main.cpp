@@ -7,10 +7,9 @@ namespace multicall
 
 auto make = [](auto... funcs) {
    return [=](auto... params) {
-      return std::initializer_list<int> {
-         ((void)funcs(params...),0)...
-      };
-   };
+      // std::initializer_list<int> { ((void)funcs(params...),0)...}; before C++17 (fold expressions)
+      (funcs(params...),...); // since C++17, but for Microsoft C/C++ Compiler Ver. 19.14 and earlier
+  };
 };
 
 }  // namespace multicall

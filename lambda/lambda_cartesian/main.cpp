@@ -4,16 +4,12 @@ namespace cartesian
 {
 
 constexpr auto product_one = [](auto f, auto x, auto... ys) constexpr {
-   std::initializer_list<int> dummy = {
-      ((void)f(x,ys),0)...
-   };
+   (f(x,ys),...);
 };
 
 constexpr auto product_itself = [](auto... xs) constexpr {
    return [=](auto f){
-      std::initializer_list<int> dummy = {
-         ((void)product_one(f,xs,xs...),0)...
-      };
+      (product_one(f,xs,xs...),...);
    };
 };
 
@@ -24,7 +20,7 @@ using namespace std;
 void print(int x, int y)
 {
    cout <<"("<<x<<","<<y<<")";
-};
+}
 
 template <typename CP>
 size_t sum_of_products(const CP& cp)

@@ -19,7 +19,7 @@ that can be printed to terminal like that:
 void print(int x, int y)
 {
    cout <<"("<<x<<","<<y<<")";
-};
+}
 C(print);
 ```
 

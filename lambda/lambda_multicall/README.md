@@ -23,9 +23,8 @@ were a possible implementation of "the single call" can be
 ```cpp
 auto make = [](auto... funcs) {
    return [=](auto... params) {
-      return std::initializer_list<int> {
-         ((void)funcs(params...),0)...
-      };
+      // std::initializer_list<int> {((void)funcs(params...),0)...}; <-- workaround for Microsoft
+      (funcs(params...),...); // since C++17, but for Microsoft C/C++ Compiler Ver. 19.14 and earlier
    };
 };
 ```
@@ -34,7 +33,7 @@ Function `multicall::make` accepts an arbitrary number of functions as parameter
 This way, we can define `auto call_all = multicall::make(f1,f2,f3);`, and then invocation of `call_all("Hello, World!");` leads to a sequence of calls: `f1("Hello, World!");`,`f2("Hello, World!");`,`f3("Hello, World!");`.  
 
 ## Further informations
-* TBD
+* [Fold Expressions](https://www.bfilipek.com/2017/01/cpp17features.html#fold-expressions) by Bartlomiej Filipek 
 
 ## Related links
 * [Universal Delegate (Function Call Wrapper)](../../variadic/universal%20delegate/README.md#callfunctionargs)
@@ -45,4 +44,4 @@ This way, we can define `auto call_all = multicall::make(f1,f2,f3);`, and then i
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 6.0.0](https://wandbox.org/)
-* Microsoft (R) C/C++ Compiler 19.14 
+* Microsoft (R) C/C++ Compiler 19.14 (*, with exception)

@@ -21,7 +21,8 @@ It can be done by means expansion of parameter pack 'bits' with several ways:
 * [C++17, New Features](http://scrutator.me/post/2017/08/11/cpp17_lang_features_p1.aspx) by Evgeniy Shcherbina
 
 ### Related links
-TBD
+* [Generating cartesian product pairs of any input at compile time](../lambda/lambda_cartesian)
+* [Callling multiple functions with the same input](../lambda/lambda_multicall)
 
 ## Inheritance Generation
 

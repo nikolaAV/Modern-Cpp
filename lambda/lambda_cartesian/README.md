@@ -4,7 +4,7 @@ The cartesian product is a mathematial operation. It is noted as __A x B__ meani
 The result is another single set, which contains pairs of _all_ item combinations of the sets __A__ and __B__.
 The operation basically means: combine every items from __A__ with every items from __B__.
 
-![cartesian](/cartesian.gif)
+![cartesian](./cartesian.gif)
 
 Example below illustrates the implementation of a functional object (closeure of lambda expression) that accepts an abitrary number of input parameters and generates cartesian product of this set with _itself_
 ```cpp

@@ -32,7 +32,7 @@ namespace tuple_
         template <typename UnaryFunction, typename... Args>
         // requires C++0x concept::FunctionObject<UnaryFunction>, see http://en.cppreference.com/w/cpp/concept/FunctionObject
         // with only argument of any type: template <typename T> UnaryFunction::operator()(const T& arg) {...}
-        UnaryFunction for_each(const std::tuple<Args...> t, UnaryFunction f)
+        UnaryFunction for_each(const std::tuple<Args...>& t, UnaryFunction f)
         {
             visit(t, f, int_type<sizeof...(Args)>());
             return std::move(f);
@@ -78,13 +78,40 @@ namespace tuple_
         };
 
         template <typename UnaryFunction, typename... Args>
-        UnaryFunction for_each(const std::tuple<Args...> t, UnaryFunction f)
+        UnaryFunction for_each(const std::tuple<Args...>& t, UnaryFunction f)
         {
             visitor<0,sizeof...(Args),Args...>::accept(t,f);
             return std::move(f);
         }
 
     } // namespace: v2
+
+      /**
+          Variant 3 (since C++17, std::apply)
+          enumerating elements in a tuple by means recursion invocation of function with variadic parameter list
+
+      */
+    namespace v3
+    {
+         template <typename UnaryFunction>
+         void visit(UnaryFunction&)
+         {
+         }
+
+         template <typename UnaryFunction, typename T, typename... Ts>
+         void visit(UnaryFunction& f, const T& first, const Ts&... ts)
+         {
+            f(first);
+            visit(f,ts...);
+         }
+
+         template <typename UnaryFunction, typename... Args>
+         UnaryFunction for_each(const std::tuple<Args...>& t, UnaryFunction f)
+         {
+            std::apply([&f](const auto&... ts) mutable { return visit(f, ts...); } , t );
+            return std::move(f);
+         }
+    } // namespace: v3
 
 } // namespace: tuple_
 

@@ -21,7 +21,7 @@ template<typename... Args>
 ostream& operator<<(ostream& out, const std::tuple<Args...>& t)
 {
     out << "tuple[" << sizeof...(Args) << "]: {";
-        tuple_::v1::for_each(t, [&](auto v) { out << v << ", "; } );
+        tuple_::v1::for_each(t, [&](const auto& v) { out << v << ", "; } );
     return out << "}";
 }
 
@@ -48,8 +48,10 @@ string to_string(const std::tuple<Args...>& t)
 int main(int /*argc*/, char** /*argv[]*/)
 {
     const auto t = make_tuple(1,2.,"3",my_type{4});
-	cout << t << endl;
-    cout << to_string(t) << endl;
+	 cout << t << endl;                                      // <--- for_each ver.1
+    cout << to_string(t) << endl;                           // <--- for_each ver.2
+    tuple_::v3::for_each(t,[](const auto& v){ cout << v; });// <--- for_each ver.3
+    cout << endl;
 
     cout << "Press any key + <enter> to exit" << endl;
     cin.get();

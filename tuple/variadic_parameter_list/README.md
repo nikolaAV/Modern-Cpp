@@ -8,7 +8,7 @@ Additionaly, we want to have an alternative approach calling it like this
     auto t = tuple{1,'2',3.14}; 
     foo(t);
 ```
-i.e. instead of passing arbitrary sets of arguments we prefer to pass a single tuple containing these arguments.\  
+i.e. instead of passing arbitrary sets of arguments we prefer to pass a single tuple containing these arguments.  
 Possible implementation of foo(tuple<...>&&)
 ```cpp
     template <typename... Ts>

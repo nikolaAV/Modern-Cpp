@@ -5,5 +5,6 @@
 * [Perfect forwarding and universal references in C++](http://eli.thegreenplace.net/2014/perfect-forwarding-and-universal-references-in-c/) by Eli Bendersky
 
 ## Related links
-* [Modern-Cpp::rvalue](https://github.com/nikolaAV/Modern-Cpp/tree/master/rvalue)
-* [Modern-Cpp::universal delegate](https://github.com/nikolaAV/Modern-Cpp/tree/master/variadic/universal%20delegate) 
+* [Modern-Cpp::rvalue](../rvalue)
+* [Modern-Cpp::universal delegate](../variadic/universal%20delegate) 
+* [Modern-Cpp::tuple unpacking](../tuple/variadic_parameter_list) 

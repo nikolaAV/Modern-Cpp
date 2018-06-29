@@ -28,7 +28,7 @@ C(print);
 * [Cartesian product at compile time in C++](https://books.google.com.ua/books?id=bqdWDwAAQBAJ&pg=PA641&lpg=PA641&dq=cartesian+product+C%2B%2B+compile+time&source=bl&ots=MGAh9W4yMq&sig=PxV2ARz7zAK-bg-UltCmqBM-58I&hl=en&sa=X&ved=0ahUKEwj_ofXv3K_bAhUHBHwKHU1BB0MQ6AEIOTAD#v=onepage&q&f=false) by Jacek Galowicz
 
 ## Related links
-* TBD
+* [inner product](../lambda_inner) at compile time
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

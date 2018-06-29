@@ -1,6 +1,6 @@
 # Generating inner product of any input at compile time
 
-Let's concider this example as a compile-time analog of the run-time STL algorithm [`std::inner_product`](https://en.cppreference.com/w/cpp/algorithm/inner_product)
+Let's consider this example as a compile-time analog of the run-time STL algorithm [`std::inner_product`](https://en.cppreference.com/w/cpp/algorithm/inner_product)
 A meaning of it can be shown as
 
 ![inner_product](./inner.gif)

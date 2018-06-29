@@ -21,7 +21,7 @@ that can be printed to terminal like that:
 * [`std::inner_product`](https://en.cppreference.com/w/cpp/algorithm/inner_product)
 
 ## Related links
-* [cartesian product](./lambda_cartesian) at compile time
+* [cartesian product](../lambda_cartesian) at compile time
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

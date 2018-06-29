@@ -87,22 +87,15 @@ namespace tuple_
     } // namespace: v2
 
       /**
-          Variant 3 (since C++17, std::apply)
-          enumerating elements in a tuple by means recursion invocation of function with variadic parameter list
-
+          Variant 3 (since C++17, std::apply + fold expression)
+          enumerating elements in a tuple by means fold expression for function with variadic parameter list
       */
     namespace v3
     {
-         template <typename UnaryFunction>
-         void visit(UnaryFunction&)
+         template <typename UnaryFunction, typename... Ts>
+         void visit(UnaryFunction& f, const Ts&... ts)
          {
-         }
-
-         template <typename UnaryFunction, typename T, typename... Ts>
-         void visit(UnaryFunction& f, const T& first, const Ts&... ts)
-         {
-            f(first);
-            visit(f,ts...);
+            (f(ts),...);
          }
 
          template <typename UnaryFunction, typename... Args>

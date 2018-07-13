@@ -31,7 +31,7 @@ where `f` is defined like that
 * [zero-overhead C++17 currying](https://vittorioromeo.info/index/blog/cpp17_curry.html) by Vittorio Romeo
 
 ## Related links
-* [Parallelized Direct Acyclic Grapf](https://github.com/nikolaAV/skeleton/tree/master/parallel_dag#header-library-that-enables-implicit-task-based-parallelism-in-a-sequential-c-code)
+* [Parallelized Direct Acyclic Grapf](https://github.com/nikolaAV/skeleton/tree/master/parallel_dag#header-library-that-enables-explicit-task-based-parallelism-in-a-sequential-c-code)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

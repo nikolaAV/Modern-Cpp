@@ -47,7 +47,7 @@ Parameter-types defined as structures are passed as anonymous objects, which are
 * [Revisiting the named parameter idiom in C++14](https://www.numbercrunch.de/blog/2015/11/revisiting-the-named-parameter-idiom-in-c14/)
 * [Strong types for strong interfaces](https://www.fluentcpp.com/2016/12/08/strong-types-for-strong-interfaces/)
 ## Related links
-* [Check type existence in the tuple](./type_existence)
+* [Check type existence in the tuple](../type_existence)
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 6.0.0](https://wandbox.org/)

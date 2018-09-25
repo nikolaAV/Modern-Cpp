@@ -20,7 +20,7 @@ int foo(int value) {
 }
 ```
 The given example is far away from a reality but in a practice sometimes we  need to use overloaded template functions. i.e. there are some cases when using free-standing functions are not quite acceptable.   
-Going back to our example in order to satisfy the requirement (a special case for all _integral_ types) we must provide provide a bundle of overloaded functions: foo(`long`), foo(`char`), foo(`unsigned`), etc.
+Going back to our example in order to satisfy the requirement (a special case for all _integral_ types) we must provide a bundle of overloaded functions: foo(`long`), foo(`char`), foo(`unsigned`), etc.
 It's an annoying and error-prove routine.  
 Well, the first attempt will not work
 ```cpp
@@ -52,7 +52,7 @@ There are three ways how it can be done correctly:
       // common case
    }
 ```
-#### Function accepts a default parameter of type that deduced by `std::enable_if<>::type`. 
+#### Function accepts a __extra default parameter__ of type that deduced by `std::enable_if<>::type`. 
 ```cpp
    template <typename T>
    T foo(T v, std::enable_if_t<std::is_integral_v<T>,T>* = nullptr) {
@@ -82,7 +82,7 @@ Note, while the same amount of code is required in this form, the declaration is
 ## Further informations
 * [C++: enable_if](http://codeofthedamned.com/index.php/enable_if) on Embedded Alchemy. 
 ## Related links
-* TBD
+* [enable_if](./enable_if)
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 6.0.0](https://wandbox.org/)

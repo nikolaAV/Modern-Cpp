@@ -76,7 +76,7 @@ There are three ways how it can be done correctly:
      // common case
    }
 ```
-Note, while the same amount of code is required in this form, the declaration is moved from the function parameter (see the previous) list to the template parameter list. The template parameter is not a type, it's a value (`nullprt`) of pointer to type deduced by `std::enable_if`.
+Note, while the same amount of code is required in this form, the declaration is moved from the function parameter (see the previous) list to the template parameter list. The template parameter is not a type, it's a value (`nullprt`) of pointer to an object of type deduced by `std::enable_if`.
 
 
 ## Further informations

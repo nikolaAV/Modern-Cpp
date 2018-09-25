@@ -82,7 +82,7 @@ Note, while the same amount of code is required in this form, the declaration is
 ## Further informations
 * [C++: enable_if](http://codeofthedamned.com/index.php/enable_if) on Embedded Alchemy. 
 ## Related links
-* [enable_if](./enable_if)
+* [enable_if](../enable_if)
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 6.0.0](https://wandbox.org/)

@@ -83,6 +83,7 @@ Note, while the same amount of code is required in this form, the declaration is
 * [C++: enable_if](http://codeofthedamned.com/index.php/enable_if) on Embedded Alchemy. 
 ## Related links
 * [enable_if](../enable_if)
+* [simple_xor](https://github.com/nikolaAV/skeleton/tree/master/algorithm/simple_xor), the impressive set of overloads
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 6.0.0](https://wandbox.org/)

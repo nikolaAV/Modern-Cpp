@@ -27,6 +27,7 @@ Example of usage:
 
 ## Further informations
 * [Greatest common divisor of more than two numbers](https://math.stackexchange.com/questions/1672249/greatest-common-divisor-of-more-than-two-numbers)
+* [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
 
 ## Related links
 * [hash compile time computation](https://github.com/nikolaAV/skeleton/tree/master/switch_string)

@@ -24,6 +24,7 @@ Fortunately, C++ let us implement both.
 
 ## Related links
 * [hash compile time computation](https://github.com/nikolaAV/skeleton/tree/master/switch_string)
+* [greatest common divisor compile time computation](./greatest_common_divisor)
 
 ## Compilers
 `constexpr` feature was introduced in _C++11_ and extended in _C++14_.

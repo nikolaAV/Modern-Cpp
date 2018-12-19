@@ -6,13 +6,13 @@ For this, we need to implement compile-time recursion (which is actually just ca
 The following snippet shows how the requested 'min' function could be implemented
 ```cpp
 template <typename T>
-T min(T a, T b)
+constexpr T min(T a, T b)
 {
     return std::min(a,b);
 }
 
 template <typename T, typename... U>
-T min(T a, T... bs)
+constexpr T min(T a, T... bs)
 {
    return min(a, min(bs...));
 }

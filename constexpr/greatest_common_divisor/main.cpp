@@ -7,7 +7,7 @@
    \see https://math.stackexchange.com/questions/1672249/greatest-common-divisor-of-more-than-two-numbers
 */
 
-#include <numeric>
+ #include <numeric>
 
 template <typename T>
 constexpr auto gcd(T m, T n)
@@ -16,16 +16,10 @@ constexpr auto gcd(T m, T n)
 }
 
 template <typename T, typename... U>
-constexpr auto gcd(T first, T second, U... nums)
+constexpr auto gcd(T m, U... ns)
 {
-   return gcd(first,gcd(second,nums...));
+   return gcd(m,gcd(ns...));
 }
-
-///////////////////////////////////////////////////
-
-#include <iostream>
-
-using namespace std;
 
 int main()
 {

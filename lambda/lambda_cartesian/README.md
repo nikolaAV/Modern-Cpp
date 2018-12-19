@@ -29,6 +29,7 @@ C(print);
 
 ## Related links
 * [inner product](../lambda_inner) at compile time
+* [Other examples of compile time computing](../../constexpr)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

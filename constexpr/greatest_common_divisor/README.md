@@ -30,7 +30,7 @@ Example of usage:
 * [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
 
 ## Related links
-* [hash compile time computation](https://github.com/nikolaAV/skeleton/tree/master/switch_string)
+* [Other examples of compile time computing](../)
 * [std::lcm](https://en.cppreference.com/w/cpp/numeric/lcm)
 
 ## Compilers

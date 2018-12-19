@@ -22,6 +22,7 @@ that can be printed to terminal like that:
 
 ## Related links
 * [cartesian product](../lambda_cartesian) at compile time
+* [Other examples of compile time computing](../../constexpr)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

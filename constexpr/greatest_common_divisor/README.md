@@ -7,9 +7,9 @@ gcd(a, b, c) = gcd(a, gcd(b, c))
 Using variadic parameter list, the function can be defined:
 ```cpp
 template <typename T, typename... U>
-constexpr auto gcd(T first, T second, U... nums)
+constexpr auto gcd(T m, U... ns)
 {
-   return gcd(first,gcd(second,nums...));
+   return gcd(m,gcd(ns...));
 }
 
 template <typename T>
@@ -30,7 +30,7 @@ Example of usage:
 * [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
 
 ## Related links
-* [hash compile time computation](https://github.com/nikolaAV/skeleton/tree/master/switch_string)
+* [Other examples of compile time computing](../)
 * [std::lcm](https://en.cppreference.com/w/cpp/numeric/lcm)
 
 ## Compilers

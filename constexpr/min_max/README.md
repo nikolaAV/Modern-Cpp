@@ -1,6 +1,6 @@
 # Compile time 'min' & 'max' functions with any number of arguments.
-Since C++17, the Standard Library provides `constexpr` algorithms [`std::min`](https://en.cppreference.com/w/cpp/algorithm/min) and [std::max](https://en.cppreference.com/w/cpp/algorithm/max) that accept two parameters.
-Thay can be extended for more agruments than two ones.
+Since C++17, the Standard Library provides `constexpr` algorithms [`std::min`](https://en.cppreference.com/w/cpp/algorithm/min) and [`std::max`](https://en.cppreference.com/w/cpp/algorithm/max) that accept two parameters.
+They can be extended for any arguments against only two.
 It is possible to write function templates that can take a variable number of arguments using variadic function templates.
 For this, we need to implement compile-time recursion (which is actually just calls through a set of overloaded functions).
 The following snippet shows how the requested 'min' function could be implemented
@@ -33,7 +33,7 @@ int main()
 * [`std::max`](https://en.cppreference.com/w/cpp/algorithm/max)
 
 ## Related links
-* [Other examples of compile time computing](./)
+* [Other examples of compile time computing](../)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

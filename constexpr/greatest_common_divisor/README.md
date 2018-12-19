@@ -32,6 +32,7 @@ Example of usage:
 ## Related links
 * [Other examples of compile time computing](../)
 * [std::lcm](https://en.cppreference.com/w/cpp/numeric/lcm)
+* [run-time gcd](https://github.com/nikolaAV/skeleton/tree/master/algorithm/gcd)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

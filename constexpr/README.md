@@ -18,13 +18,18 @@ constexpr size_t popcount(size_t x) {
 This stateless, recursive computation might be less comprehensible for some readers, and maybe clearer to others. It is said that finding iterative or recursive programs easier to understand depends on the order in which they are introduced to a programmer.
 Fortunately, C++ let us implement both.
 
+### Other examples of compile time computing
+* [Greatest common divisor](./greatest_common_divisor)
+* [String hash](https://github.com/nikolaAV/skeleton/tree/master/switch_string)
+* [Cartesian product](../lambda/lambda_cartesian)
+* [Inner product](../lambda/lambda_inner)
+* [String concatenation](https://github.com/nikolaAV/skeleton/tree/master/static_string)
 
 ## Further informations
 * [constexpr specifier](https://en.cppreference.com/w/cpp/language/constexpr)
 
 ## Related links
-* [hash compile time computation](https://github.com/nikolaAV/skeleton/tree/master/switch_string)
-* [greatest common divisor compile time computation](./greatest_common_divisor)
+TBD
 
 ## Compilers
 `constexpr` feature was introduced in _C++11_ and extended in _C++14_.

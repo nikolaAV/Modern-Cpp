@@ -44,9 +44,10 @@ bool contains_none(const Container& c, Values&&... vals)
 
 ## Further informations
 * [Fold Expressions](https://www.bfilipek.com/2017/01/cpp17features.html#fold-expressions) by Bartlomiej Filipek
+* [Fold expressions](https://en.cppreference.com/w/cpp/language/fold) on cppreference.com
 
 ## Related links
-TBD
+* [Jump to variadic section](../)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

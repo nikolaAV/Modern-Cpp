@@ -12,3 +12,5 @@ A call decorator for any function with various parameters. It allow to customize
 ## [Mixin-based Programming](./mixins)
 Applying multiple inheritance to compose a target class as set of different fragments of code.
 
+## [Fold expression (since C++17)](./fold_expression)
+Several examples how to reduce function parameter pack over a binary operator.

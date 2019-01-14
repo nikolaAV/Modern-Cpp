@@ -49,7 +49,7 @@ This implementation has its shortcomings:
 * The author of 'LabeledPoint' needs to be careful to provide exactly all of the same constructors as 'Point'
 * This constraint becomes more problematic if 'Point' changes from one version of the 'Polygon' template to another: The addition of a new 'Point' constructor could require each derived class to be updated.  
 
-_Mixins_ provide an alternative way to customize the behavior of a type without inheriting from it. Mixins essentially invert the normal direction of inheritance, because the new classes are ìmixed inî to the inheritance hierarchy as base classes of a class template rather than being created as a new derived class. This approach allows the introduction of new data members and other operations without requiring any duplication of the interface. 
+_Mixins_ provide an alternative way to customize the behavior of a type without inheriting from it. Mixins essentially invert the normal direction of inheritance, because the new classes are ‚Äúmixed in‚Äù to the inheritance hierarchy as base classes of a class template rather than being created as a new derived class. This approach allows the introduction of new data members and other operations without requiring any duplication of the interface. 
 ```cpp
 template<typename... Mixins>
 class Point : public Mixins...
@@ -60,7 +60,7 @@ public:
    Point(double x, double y) : x_{x}, y_{y} {}
    // ...
 ```
-Now, we can ìmix inî a base class containing a label to produce a 'LabeledPoint':
+Now, we can ‚Äúmix in‚Äù a base class containing a label to produce a 'LabeledPoint':
 ```cpp
 class Label
 {
@@ -80,14 +80,13 @@ public:
 };
 using AdvancedPoint = Point<Label,Color>;
 ```
-Mixins are useful in cases where a template needs some small level of customization ósuch as decorating internally stored objects with user-specified dataówithout requiring the library to expose and document those internal data types and their interfaces.
+Mixins are useful in cases where a template needs some small level of customization ‚Äîsuch as decorating internally stored objects with user-specified data‚Äîwithout requiring the library to expose and document those internal data types and their interfaces.
 
 ## Further informations
 * [C++ Templates - The Complete Guide, 2nd Edition](http://www.tmplbook.com/)by David Vandevoorde, Nicolai M. Josuttis, and Douglas Gregor, chapter 21.3
 * [Mixin-Based Programming in C++](http://www.drdobbs.com/cpp/mixin-based-programming-in-c/184404445) 
 ## Related links
-TBD
-
+* [](../variadic/inheritance#template-parameter-pack-expansion-inheritance)
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 6.0.0](https://wandbox.org/)

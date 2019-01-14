@@ -8,7 +8,6 @@ struct C: Types...
 
 ## Further informations
 * [Variadic templates. Unpacking](http://scrutator.me/post/2013/01/18/template-innovations.aspx)
-
 ## Related links
-* [nikolaAV\::modern-cpp\::overloaded-lambdas](https://github.com/nikolaAV/Modern-Cpp/tree/master/lambda/lambda_overloaded)
-
+* [overloaded-lambdas](../../lambda/lambda_overloaded)
+* [Mixin-based Type](../mixins#mixin-based-type-how-to-introduce-easily-additional-information-without-changing-its-interface)

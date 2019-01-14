@@ -86,7 +86,7 @@ Mixins are useful in cases where a template needs some small level of customizat
 * [C++ Templates - The Complete Guide, 2nd Edition](http://www.tmplbook.com/)by David Vandevoorde, Nicolai M. Josuttis, and Douglas Gregor, chapter 21.3
 * [Mixin-Based Programming in C++](http://www.drdobbs.com/cpp/mixin-based-programming-in-c/184404445) 
 ## Related links
-* [](../variadic/inheritance#template-parameter-pack-expansion-inheritance)
+* [inheritance generation](../variadic/inheritance#template-parameter-pack-expansion-inheritance)
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 6.0.0](https://wandbox.org/)

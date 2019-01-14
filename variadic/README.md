@@ -14,3 +14,6 @@ Applying multiple inheritance to compose a target class as set of different frag
 
 ## [Fold expression (since C++17)](./fold_expressions)
 Several examples how to reduce function parameter pack over a binary operator.
+
+## [Variadic Indices](./variadic_indices)
+Variadic list of indices to access the corresponding element of the container.

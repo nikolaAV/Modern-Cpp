@@ -1,16 +1,13 @@
 # Enumerating elements of different types in a heterogeneous container (C++17)
 The code example below demonstrates how elements of different types can be stored in one container like it can be done in OOP using polymorphic types. 
 ```cpp
-struct circle
-{
+struct circle {
    const char* draw() const { return "I'm a circle"; }
 };
-struct square
-{
+struct square {
    const char* draw() const { return "I'm a square"; }
 };
-struct triangle
-{
+struct triangle {
    const char* draw() const { return "I'm a triangle"; }
 };
 
@@ -25,6 +22,28 @@ int main()
    for(auto s : shapes)
       visit([](auto s) {cout << s.draw() << endl;}, s );
 ```
+And one more point. Let's suppose our shapes to be drawn use different methods like this:
+```cpp
+struct circle {
+   const char* draw() const { return "I'm a circle"; }
+};
+struct square {
+   const char* sketch() const { return "I'm a square"; }
+};
+struct triangle {
+   const char* paint() const { return "I'm a triangle"; }
+};
+```
+then applying ["The overload lambda Pattern"](https://www.bfilipek.com/2019/02/2lines3featuresoverload.html) we may draw every shape stored in the  heterogeneous container. 
+```cpp
+   const auto composite_visitor = overloaded {
+       [](const circle& c)   { cout << c.draw() << endl; }
+      ,[](const square& s)   { cout << s.sketch() << endl; }
+      ,[](const triangle& t) { cout << t.paint() << endl; }
+   };
+   for(auto s : shapes)
+      visit(composite_visitor, s );
+```
 
 ## Further informations
 * [Original Article](https://habrahabr.ru/post/332084/) by JegernOUTT
@@ -37,4 +56,7 @@ int main()
 * [Lambda. The overload Pattern](../../lambda/lambda_overloaded)
 
 ## Supported Compilers
-* Microsoft (R) C/C++ Optimizing Compiler Version 19.10.xyz with option /std:c++latest ([Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-express/))
+* Microsoft (R) C/C++ Optimizing Compiler Version 19.16.xyz with option /std:c++latest
+* GCC 8.1.0
+* Clang 7.0.0
+

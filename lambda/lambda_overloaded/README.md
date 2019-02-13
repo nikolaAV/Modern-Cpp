@@ -30,6 +30,7 @@ An easy way to compose a lambda with multiple overloaded function call syntax.
 * [Overloading Lambdas in C++17](https://dev.to/tmr232/that-overloaded-trick-overloading-lambdas-in-c17) by Tamir Bahar
 * [Overloaded Lambdas](http://cpptruths.blogspot.com/2014/05/fun-with-lambdas-c14-style-part-2.html) by Sumant Tambe
 * [Heterogeneous container (C++17)](https://habrahabr.ru/post/332084/) by JegernOUTT
+* [2 Lines Of Code and 3 C++17 Features - The overload Pattern](https://www.bfilipek.com/2019/02/2lines3featuresoverload.html) by Bartlomiej Filipek
 
 ## Related links
 * [nikolaAV\::modern-cpp::heterogeneous-container](https://github.com/nikolaAV/Modern-Cpp/tree/master/variant/heterogeneous_container)

@@ -31,8 +31,9 @@ int main()
 * [std::visit](http://en.cppreference.com/w/cpp/utility/variant/visit) 
 
 ## Related links
-* [Unpacking & enumerating Tuples in C++14](https://github.com/nikolaAV/Modern-Cpp/tree/master/tuple/unpacking_tuples) by nikolaAV on GitHub
-* [Wrapping lambdas into std::function](https://github.com/nikolaAV/Modern-Cpp/blob/master/function/wrapping_lambdas/README.md) 
+* [Unpacking & enumerating Tuples in C++14](../../tuple/unpacking_tuples) by nikolaAV on GitHub
+* [Wrapping lambdas into std::function](../../function/wrapping_lambdas) 
+* [Lambda. The overload Pattern](../../lambda/lambda_overloaded)
 
 ## Supported Compilers
 * Microsoft (R) C/C++ Optimizing Compiler Version 19.10.xyz with option /std:c++latest ([Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-express/))

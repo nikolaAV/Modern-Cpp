@@ -28,7 +28,8 @@ int main()
 
 ## Further informations
 * [Original Article](https://habrahabr.ru/post/332084/) by JegernOUTT
-* [std::visit](http://en.cppreference.com/w/cpp/utility/variant/visit) 
+* [std::visit](http://en.cppreference.com/w/cpp/utility/variant/visit)
+* [Pattern for visitation of `std::variant`](https://www.bfilipek.com/2019/02/2lines3featuresoverload.html)
 
 ## Related links
 * [Unpacking & enumerating Tuples in C++14](../../tuple/unpacking_tuples) by nikolaAV on GitHub

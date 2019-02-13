@@ -4,6 +4,7 @@
    https://dev.to/tmr232/that-overloaded-trick-overloading-lambdas-in-c17
    https://habrahabr.ru/post/332084/
    http://cpptruths.blogspot.com/2014/03/fun-with-lambdas-c14-style-part-1.html
+   https://www.bfilipek.com/2019/02/2lines3featuresoverload.html
 */
 
 template<typename... Ts> struct overloaded : Ts... { using Ts::operator()...; };

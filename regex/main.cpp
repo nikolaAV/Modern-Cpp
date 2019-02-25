@@ -1,54 +1,41 @@
 #include <string>
+#include <regex>
 #include <iostream>
-#include <exception>
+#include <fstream>
 #include <sstream>
-
-#include "cmd_line.h"
-#include "file.h"
-#include "mib.h"
+#include <iterator>
 
 using namespace std;
 
-
-string definitions(const string& mib_content)
-{
-	stringstream out;
-	mib::oid::for_each(mib_content, [&out](const mib::OBJECT_IDENTIFIER& d) {
-		out << "const snmp::oid " << d.name << "\t(" << d.parent << " + " << d.id << ");" << endl;
-	});
-	out << endl;
-	mib::otype::for_each(mib_content, [&out](const mib::OBJECT_TYPE& d) {
-		out << "GSNMP_DEFINE_VARIABLE(" << d.name << ",\t" << d.type << ",\t(" << d.parent << ",\t + " << d.id << ");" << endl;
-	});
-	return out.str();
+string read() {
+   stringstream ss;
+   ss << ifstream{"Regular expressions library - cppreference.com.html"}.rdbuf();
+   return ss.str();
 }
 
-
-void generate(const input::data& in)
+int main()
 {
-	const string	mib_content{ file::read(in.mib_file) };
-	string			out_content{ file::read(in.template_file) };
+   auto const in = read();
 
-	out_content = regex_replace(out_content, regex("@REPLACE_GP_GENERATOR_VERSION@"),	string("1.00"));
-	out_content = regex_replace(out_content, regex("@REPLACE_GP_MIBTXT_VERSION@"),		mib::gplus_txt::version(mib_content));
-	out_content = regex_replace(out_content, regex("@REPLACE_GP_DEFINITIONS@"),			definitions(mib_content));
+   /**
+      Expected pattern: <a href="url" ... >text ...</a>
+      \see https://en.cppreference.com/w/cpp/regex/ecmascript
+   */
+   const regex reg{"<a href=\"([^\"]*)\"[^<]*>([^<]*)</a>"};
+   //                         link             dest
+   {  // variant 1
+      sregex_iterator it{begin(in), end(in), reg};      
+		for (; it != sregex_iterator{}; ++it)
+         cout << it->str(2) << ":\t" << it->str(1) << endl;   
+   }
 
-	file::open<ofstream>(in.out_file) << out_content;
+   {  // variant 2
+      sregex_token_iterator it{begin(in), end(in), reg, {1,2}};      
+		while (it != sregex_token_iterator{}) {
+         const string link{*it++};
+         const string dest{*it++};
+         cout << dest << ":\t" << link << endl;
+      }
+   }
 }
 
-int main(int argc, char** argv)
-{
-	try
-	{
-		//generate(input::read(argc, argv));
-		generate({ "GPLUS-MIB.txt", "gp_mib.template", "gp_mib.template.h" });
-	}
-	catch (exception& e)
-	{
-		cout << e.what() << endl;
-		return 1;
-	}
-
-	cout << "Operation completed successfully" << endl;
-	return 0;
-}

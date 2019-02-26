@@ -36,7 +36,7 @@ The other one is the part between the `<a ...>` and `</a>`, which contains the l
 * [Modified ECMAScript regular expression grammar](https://en.cppreference.com/w/cpp/regex/ecmascript)
 
 ## Related links
-* TBD
+* [Regular expressions. for_each algorithm](https://github.com/nikolaAV/skeleton/tree/master/algorithm/regex_for_each)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

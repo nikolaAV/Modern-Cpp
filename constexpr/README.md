@@ -30,7 +30,7 @@ Fortunately, C++ let us implement both.
 * [constexpr specifier](https://en.cppreference.com/w/cpp/language/constexpr)
 
 ## Related links
-TBD
+* [`constexpr` invocation context](./invocation_context)
 
 ## Compilers
 `constexpr` feature was introduced in _C++11_ and extended in _C++14_.

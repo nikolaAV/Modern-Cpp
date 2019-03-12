@@ -3,7 +3,7 @@ The following function uses a variadic list of indices to access the correspondi
 ```cpp
 template<typename C, typename… Idx>
 void print(C const& coll, Idx… idx){
-    ((std::cout << c[idx]),...);
+    ((std::cout << coll[idx]),...);
 }
 ```
 That is, when calling

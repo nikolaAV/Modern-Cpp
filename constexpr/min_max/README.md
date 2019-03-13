@@ -27,12 +27,25 @@ int main()
    static_assert(2==max(2,1));
 }
 ```
+There are also overloaded versions of __min__ and __max__ for C arrays passed as parameters.  Of course, values of such arrays have to be defined at compile time. 
+```cpp
+int main()
+{
+   constexpr int arr1[] = {0,1,2,3,4,5,6,7,8,9}; 
+   constexpr int arr2[] = {2,1}; 
+   static_assert(0==min(arr1));
+   static_assert(1==min(arr2));
+   static_assert(9==max(arr1));
+   static_assert(2==max(arr2));
+}
+```
 
 ## Further informations
 * [`std::min`](https://en.cppreference.com/w/cpp/algorithm/min)
 * [`std::max`](https://en.cppreference.com/w/cpp/algorithm/max)
 
 ## Related links
+* [Variadic Indices](https://github.com/nikolaAV/Modern-Cpp/tree/master/variadic/variadic_indices)
 * [Other examples of compile time computing](../)
 
 ## Compilers

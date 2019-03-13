@@ -24,6 +24,12 @@ Example of usage:
   static_assert(1==gcd(1,2,3));
   static_assert(2==gcd(8,6,4,2,10,12,100));
 ```
+There is also overloaded version for C arrays:
+```cpp
+  constexpr long arr[] = {48,16,24,96};
+  static_assert(8==gcd(arr));
+```
+
 
 ## Further informations
 * [Greatest common divisor of more than two numbers](https://math.stackexchange.com/questions/1672249/greatest-common-divisor-of-more-than-two-numbers)

@@ -1,5 +1,5 @@
 # Validating ISBNs.
-Let's suppose you are to write a program that validates that 10-digit values entered by the user, as a string, represent valid [ISBN-10](https://en.wikipedia.org/wiki/International_Standard_Book_Number) numbers. 
+Let's suppose you are to write a program that validates 10-digit values entered by the user, as a string, represent valid [ISBN-10](https://en.wikipedia.org/wiki/International_Standard_Book_Number) numbers. 
 As experienced programmer you would have used an algorithm from the Standard Library rather than reinvented the wheels.  
 This first attempt might be shown as follows:
 ```cpp

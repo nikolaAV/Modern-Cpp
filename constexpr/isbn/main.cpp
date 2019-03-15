@@ -13,6 +13,7 @@
    there is a possibility to do such validation for string literals at compile time. 
 
    \see https://en.wikipedia.org/wiki/International_Standard_Book_Number
+   \see https://github.com/nikolaAV/Modern-Cpp/tree/master/constexpr/isbn 
 */
 
 namespace isbn10

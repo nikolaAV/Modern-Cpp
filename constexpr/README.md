@@ -25,6 +25,7 @@ Fortunately, C++ let us implement both.
 * [Inner product](../lambda/lambda_inner)
 * [String concatenation](https://github.com/nikolaAV/skeleton/tree/master/static_string)
 * [min & max for any number of arguments](./min_max)
+* [Validating ISBNs](./isbn)
 
 ## Further informations
 * [constexpr specifier](https://en.cppreference.com/w/cpp/language/constexpr)

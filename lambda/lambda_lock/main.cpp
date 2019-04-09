@@ -1,7 +1,8 @@
-#include <string>
 #include <iostream>
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
 
 // std::thread member emulation
 // because Cygwin GCC 4.7.2 under Windows doesn't support them

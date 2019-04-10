@@ -27,7 +27,7 @@ template<typename F> void lock( std::mutex& m, F f )
 * [std::lock_guard](https://en.cppreference.com/w/cpp/thread/lock_guard)
 
 ## Related links
-* TBD
+* [what does lambda capture?](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/questions/README.md#lambda-capture-of-globals)
 
 ## Compilers
 * [GCC 5.1.0](https://wandbox.org/)

@@ -11,6 +11,10 @@
 #include <numeric>
 #include <cstddef>
 #include <utility>
+#include <array>
+
+namespace recursion
+{
 
 template <typename T>
 constexpr auto gcd(T m, T n)
@@ -36,8 +40,33 @@ constexpr auto gcd(const T(&arr)[N])
    return gcd(arr,std::make_index_sequence<N>{});
 }
 
-int main()
+} // end of namespace recursion 
+
+namespace imperative
 {
+
+template<typename Range, typename Func, typename T>
+constexpr T accumulate(const Range& range, Func func, T init) {
+   for(auto&& elem:range)
+      init = func(init,elem);
+   return init; 
+}
+
+template<typename Range>
+constexpr auto gcd(const Range& range) {
+   return accumulate(range
+      ,[](auto x, auto y){ return -1==x? y : std::gcd(x,y); }
+      ,-1      
+   );
+}
+
+}  // end of namespace imperative
+
+
+void test1()
+{
+  using namespace recursion;
+  
   static_assert(8==gcd(48,16,24,96));
   static_assert(1==gcd(1,2,3));
   static_assert(2==gcd(8,6,4,2,10,12,100));
@@ -53,3 +82,23 @@ int main()
   }
 }
 
+void test2()
+{
+  using namespace imperative;
+
+  {   constexpr std::array arr{48,16,24,96};
+      static_assert(8==gcd(arr));
+  }
+  {   constexpr unsigned short arr[] = {1,2,3};
+      static_assert(1==gcd(arr));
+  }
+  {   constexpr int arr[] = {8,6,4,2,10,12,100};
+      static_assert(2==gcd(arr));
+  }
+}
+
+int main()
+{
+   test1();
+   test2();
+}

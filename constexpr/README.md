@@ -26,6 +26,7 @@ Fortunately, C++ let us implement both.
 * [String concatenation](https://github.com/nikolaAV/skeleton/tree/master/static_string)
 * [min & max for any number of arguments](./min_max)
 * [Validating ISBNs](./isbn)
+* [accumulate algorithm with constexpr lambda](../lambda/lambda_constexpr)
 
 ## Further informations
 * [constexpr specifier](https://en.cppreference.com/w/cpp/language/constexpr)
@@ -34,4 +35,4 @@ Fortunately, C++ let us implement both.
 * [`constexpr` invocation context](./invocation_context)
 
 ## Compilers
-`constexpr` feature was introduced in _C++11_ and extended in _C++14_.
+`constexpr` feature was introduced in _C++11_ and extended in _C++14_,_C++17_.

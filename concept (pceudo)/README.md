@@ -5,7 +5,7 @@ A few alternative routes until C++ language supports [them](http://en.cppreferen
 * using `std::enable_if`, for more details see [the article](https://habrahabr.ru/post/304728/)
 * using wrappers that are implemented by means C++ structures with concept-specified interface as [function-members set](https://habrahabr.ru/post/151504/)
 * [How to Make SFINAE Pretty](https://www.fluentcpp.com/2018/05/18/make-sfinae-pretty-2-hidden-beauty-sfinae/)
-
+* [Detection Idiom - A Stopgap for Concepts](https://blog.tartanllama.xyz/detection-idiom/) by Simon Brand
 
 ## Related links
 * Example of an approach based on `std::enable_if` to make set of overloaded [XOR cipher algorithm](https://github.com/nikolaAV/skeleton/blob/master/algorithm/simple_xor).

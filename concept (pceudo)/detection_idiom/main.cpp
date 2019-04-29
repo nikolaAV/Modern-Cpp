@@ -2,6 +2,10 @@
 #include <iterator>
 #include <type_traits>
 
+/**
+  \see https://github.com/nikolaAV/Modern-Cpp/tree/master/concept%20(pceudo)/detection_idiom
+*/
+
 namespace detail {
   /**
       Modern Detection Idiom: Use Fundamentals TS v2

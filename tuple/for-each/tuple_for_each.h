@@ -106,6 +106,27 @@ namespace tuple_
          }
     } // namespace: v3
 
+      /**
+          Variant 4 (since C++17, std::index_sequence + fold expression)
+          \see https://blog.tartanllama.xyz/exploding-tuples-fold-expressions/
+          \see https://github.com/nikolaAV/Modern-Cpp/tree/master/variadic/variadic_indices
+      */
+    namespace v4
+    {
+         template <typename UnaryFunction, typename... Args, size_t... Idx>
+         UnaryFunction&& for_each(const std::tuple<Args...>& t, UnaryFunction&& f, std::index_sequence<Idx...>)
+         {
+            (f(std::get<Idx>(t)),...);
+            return std::move(f);
+         }
+
+         template <typename UnaryFunction, typename... Args>
+         UnaryFunction for_each(const std::tuple<Args...>& t, UnaryFunction f)
+         {
+            return std::move(for_each(t,std::move(f),std::make_index_sequence<sizeof...(Args)>()));
+         }
+    }
+
 } // namespace: tuple_
 
 

@@ -52,6 +52,8 @@ int main(int /*argc*/, char** /*argv[]*/)
     cout << to_string(t) << endl;                           // <--- for_each ver.2
     tuple_::v3::for_each(t,[](const auto& v){ cout << v; });// <--- for_each ver.3
     cout << endl;
+    tuple_::v4::for_each(t,[](const auto& v){ cout << v; });// <--- for_each ver.4
+    cout << endl;
 
     cout << "Press any key + <enter> to exit" << endl;
     cin.get();

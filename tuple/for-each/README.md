@@ -1,4 +1,4 @@
-# for_each(TupleType& tuple, UnaryFunction f)
+# [for_each(TupleType& tuple, UnaryFunction f)](./tuple_for_each.h)
 Applies the given function object f to every element in the tuple [first, last], in order.
 
 Example: how we can print a tuple

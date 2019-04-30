@@ -21,7 +21,8 @@ tuple[3]: {1, 2, 3, }
 In file 'tuple_for_each.h' you can find three variants of possible implementation of element enumeration in the tuple:
 * by means overloaded function template 
 * by means partial specialization class template
-* by means fold expression, std::apply and lambda capture parameter pack (since C++17)
+* by means fold expression, [`std::apply`](https://en.cppreference.com/w/cpp/utility/apply) and lambda capture parameter pack (since C++17)
+* by means fold expression and [`std::index_sequence`](https://en.cppreference.com/w/cpp/utility/integer_sequence)
 
 ## Further informations
 The techniques which are used for enumeration of a tuple

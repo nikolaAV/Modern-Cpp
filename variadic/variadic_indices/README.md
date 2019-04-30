@@ -61,6 +61,7 @@ print(coll,std::make_index_sequence<4>{});
 * [parameter pack enumeration](../enumeration#enumeration-of-elements-in-the--expression)
 * [fold expressions](../fold_expressions)
 * [Indices for compile time C-arrays. Usage example: gcd](../../constexpr/greatest_common_divisor)
+* [Indices for tuples. Usage example: for_each](../../tuple/for-each)
 * [back to 'variadic' section](../)
 ## Compilers
 * [GCC 7.1.0](https://wandbox.org/)

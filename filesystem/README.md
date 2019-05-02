@@ -14,6 +14,7 @@ Reimplementing such a tool is, however, also a nice standard task to get going w
 
 ## Further informations
 * [<filesystem>](https://en.cppreference.com/w/cpp/filesystem)
+* [How to Iterate Through Directories in C++](https://www.bfilipek.com/2019/04/dir-iterate.html) by Bartlomiej Filipek
 
 ## Related links
 * TBD

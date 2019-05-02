@@ -13,7 +13,7 @@ Both list all files in a directory and provide supplemental information such as 
 Reimplementing such a tool is, however, also a nice standard task to get going with directory and file traversal. It's a good way to get a knowledge from the practice. 
 
 ## Further informations
-* [<filesystem>](https://en.cppreference.com/w/cpp/filesystem)
+* [`std::filesystem`](https://en.cppreference.com/w/cpp/filesystem)
 * [How to Iterate Through Directories in C++](https://www.bfilipek.com/2019/04/dir-iterate.html) by Bartlomiej Filipek
 
 ## Related links

@@ -1,6 +1,10 @@
 #include <type_traits>
 #include <utility>
 
+/**
+   \see https://github.com/nikolaAV/Modern-Cpp/tree/master/traits/is_nothrow_move_constructible
+*/
+
 template <typename T, typename = std::void_t<>>
 struct is_nothrow_move_constructible 
    : std::false_type {

@@ -1,6 +1,6 @@
 # 'is_nothrow_move_constructible' trait by our own hands.
 There has already been the [`std::is_nothrow_move_constructible`](https://en.cppreference.com/w/cpp/types/is_move_constructible) trait since `C++11`. 
-So let's suppose we need to get experience writing type trait. We need to obtain information about techniques / practices hoe it can be done in the Modern `C++`.  
+So let's suppose we need to get experience writing type trait. We need to obtain information about techniques / practices how it can be done in the Modern `C++`.  
 ### Motivation
 If you design generic code (i.e. a library) that depends on types specified by a client you may often have to detect what facilities a clien type provides. 
 It is occasionally useful to determine whether a particular operation can throw an exception. 
@@ -19,8 +19,8 @@ struct pair {
    {}
 // ...
 ```
-__pair__’s move constructor can throw exceptions when the move operations of either T1 or T2 can throw. 
-Given a trait __'is_nothrow_move_constructible'__, we can express this property by using a computed `noexcept` exception specification in __pair__’s move constructor.  
+__pair__â€™s move constructor can throw exceptions when the move operations of either T1 or T2 can throw. 
+Given a trait __'is_nothrow_move_constructible'__, we can express this property by using a computed `noexcept` exception specification in __pair__â€™s move constructor.  
 ### Implementation
 All that remains is to implement the __'is_nothrow_move_constructible'__ trait. 
 We can directly implement this trait using the `noexcept` operator, which determines whether a given expression is guaranteed to be nonthrowing.
@@ -31,7 +31,7 @@ struct is_nothrow_move_constructible
 {};
 ```
 However, this implementation should be improved because it is not [SFINAE-friendly](http://kaba.hilvi.org/pastel-1.5.0/sfinae_friendliness.htm). 
-If the trait is instantiated with a type __T__that does not have a usable move or copy constructor—making the expression `T(std::declval<T&&>())` invalid — the entire program is ill-formed:
+If the trait is instantiated with a type __T__ that does not have a usable move or copy constructorâ€”making the expression `T(std::declval<T&&>())` invalid â€” the entire program is ill-formed:
 ```cpp
 struct no_copy {  // non copyable
     no_copy(const no_copy&) = delete;
@@ -54,7 +54,7 @@ struct is_nothrow_move_constructible <T,std::void_t<decltype(T(std::declval<T>()
    : std::integral_constant<bool,noexcept(T(std::declval<T>()))> {
 };
 ```
-If the substitution of `std::void_t<…>` in the partial specialization is valid, that specialization is selected, and the `noexcept(…)` expression in the base class specifier can safely be evaluated. 
+If the substitution of `std::void_t<â€¦>` in the partial specialization is valid, that specialization is selected, and the `noexcept(â€¦)` expression in the base class specifier can safely be evaluated. 
 Otherwise, the partial specialization is discarded
 without instantiating it, and the primary template is instantiated instead producing a `std::false_type` result.  
 Note that there is no way to check whether a move constructor throws without being able to call it directly. 

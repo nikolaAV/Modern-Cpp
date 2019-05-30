@@ -36,7 +36,7 @@ This feature has been there since C++98.
       { "Orange", "Something to eat and refresh", 50.0 }      
    }; 
 ```
-If you want to find a ìCarî then you need to create temporary product and fill its name:
+If you want to find a ‚ÄúCar‚Äù then you need to create temporary product and fill its name:
 ```cpp
     if(s.find(product{"Car","",0.})==s.end()) {...}
 ```
@@ -70,7 +70,7 @@ These overloads are template, so they could theoretically accept anything that c
    iterator find(const Key& key); // C++11, type Key is a part of container type set<Key> 
    template <typename OtherKey> iterator find(const OtherKey& key); // since C++14
 ```
-Whatís the difference between those two lines:
+What‚Äôs the difference between those two lines:
 ```cpp
    set<product> s1;        // resolved to std::set<product,std::less<product>> 
    set<product,less<>> s2; // resolved to std::set<product,std::less<void>> 
@@ -100,7 +100,7 @@ where
 * [How to search a C++ set with another type than its key](https://www.fluentcpp.com/2017/06/09/search-set-another-type-key/) by Jonathan Boccara
 * [`std::set::find`](https://en.cppreference.com/w/cpp/container/set/find)
 ## Related links
-* TBD
+* [back to stl section](../)
 ## Compilers
 Requires compilers that are compliant to C++14 Standard
 * [GCC 7.1.0](https://wandbox.org/)

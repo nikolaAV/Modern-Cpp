@@ -4,7 +4,8 @@
 
 /**
    Heterogeneous Lookup in Ordered Containers, C++14 Feature
-   https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html#whats-coming-in-c20
+   \see https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html#whats-coming-in-c20
+        https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/is_transparent
 */
 
 using namespace std;

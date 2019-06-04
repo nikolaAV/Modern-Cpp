@@ -29,6 +29,7 @@ for (auto i : v) cout << i << " ";
 ## Further informations
 * [Moving Ranges Around with STL Algorithms](https://www.fluentcpp.com/2018/04/13/moving-ranges-stl/) by Jonathan Boccara
 * [`std::copy_backward` vs. `std::copy`+reverse_iterator](https://www.fluentcpp.com/2019/05/31/the-difference-between-stdcopy_backward-and-stdcopy-with-reverse-iterators/) by Jonathan Boccara
+* [`std::shift_left`, `std::shift_right`](https://en.cppreference.com/w/cpp/algorithm/shift)
 ## Related links
 * [back to stl section](../)
 ## Compilers

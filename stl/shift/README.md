@@ -1,9 +1,9 @@
 # How to shift elements inside the container?
 Let’s consider the case where we want to copy a subpart of a range over to a position further down the range. It could be that this new position is located before the end of the first subrange.  
-For instance, consider this 1 to 10 range: 
+For instance, consider this 1 to 10 range:  
 ![input](./input.png)
 
-Say that we’d like to move the 1 to 5 subrange 3 positions down:
+Say that we’d like to move the 1 to 5 subrange 3 positions down:  
 ![output](./output.png)
 
 ```cpp

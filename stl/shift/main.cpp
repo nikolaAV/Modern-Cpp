@@ -5,7 +5,7 @@
 
 /**
    How to shift elements inside the container?
-   \see https://www.fluentcpp.com/2018/04/13/moving-ranges-stl/
+   \see https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/shift
 */
 
 using namespace std;

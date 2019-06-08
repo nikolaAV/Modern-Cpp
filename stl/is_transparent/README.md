@@ -99,6 +99,7 @@ where
 * [Heterogeneous Lookup in Ordered Containers](https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html#whats-coming-in-c20) by Bartlomiej Filipek
 * [How to search a C++ set with another type than its key](https://www.fluentcpp.com/2017/06/09/search-set-another-type-key/) by Jonathan Boccara
 * [`std::set::find`](https://en.cppreference.com/w/cpp/container/set/find)
+* [Heterogeneous Lookup in Associative Containers](https://abseil.io/tips/144)
 ## Related links
 * [back to stl section](../)
 ## Compilers

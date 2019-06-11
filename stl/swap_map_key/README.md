@@ -61,7 +61,8 @@ or
 
 ## Related links
 * [update_map_key](../update_map_key)  
-[back to algorithm](../)
+
+[back to STL section](../)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

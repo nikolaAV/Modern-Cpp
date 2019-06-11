@@ -5,7 +5,7 @@ The C++ standard does not only standardize the language, as it needs to be under
 Some snippets of codecase in this section explain how to put the STL to the best use with a broad range of examples.  
 * [`is_transparent` or Heterogeneous Lookup in Ordered Containers](./is_transparent) the ability to search an associative container with a key of type which is different to element type stored in the container.
 * [shift](./shift) How to shift elements inside the container?
-* [`std::map` update key](./update_map_key) and [swap key](./swap_map_key) how to swap / update element key in the collection very efficiently without memory reallocation.
+* [`std::map` update key](./update_map_key) and [swap key](./swap_map_key) Since C++17 there is a way of efficiently modifying the keys of std::map items without memory relocation.
 
 ## Further informations
 * TBD

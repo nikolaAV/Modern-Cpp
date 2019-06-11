@@ -32,13 +32,15 @@ auto update_key( std::map<Key,T,Compare,Allocator>& m
 /**
    Changes the keys of requested map items without re-insertion and memory relocation.
 
-   param [in,out] 'm' is a map-source container
-   param [in]     'old_key' is an old key value
-   param [in]     'new_key' is a new key value
-   retval  a std::pair<iterator,bool> consisting of an iterator to the element with updated key(or m.end()) and a bool denoting whether the updating took place.
+   \param [in,out] 'm' is a map-source container
+   \param [in]     'old_key' is an old key value
+   \param [in]     'new_key' is a new key value
+   \retval  a std::pair<iterator,bool> consisting of an iterator to the element with updated key(or m.end()) and a bool denoting whether the updating took place.
             - if the updating failes then the source 'm' remains unchangeable.
             - if an element does not exist, pair::first is end(), pair::second is false
             - if a key duplication is detected, pair::first is a position to element with 'key_new', pair::second is false
+
+   \see https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/update_map_key
 */
 
 template<

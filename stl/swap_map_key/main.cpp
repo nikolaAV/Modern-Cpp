@@ -9,6 +9,8 @@
    \param[in,out] m - a target map-container
    \param[in] first, second - keys or iterators which points out map items whose contents to swap
    \retval 'true' if the swapping took place, 'false' otherwise
+
+   \see https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/swap_map_key
 */
 
 template<

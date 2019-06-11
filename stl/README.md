@@ -11,5 +11,5 @@ Some snippets of codecase in this section explain how to put the STL to the best
 * TBD
 
 ## Related links
-* TBD
+* [STL algorithms extensions](https://github.com/nikolaAV/skeleton/tree/master/algorithm) that is ones which are not shipped with the Standard Library.
 

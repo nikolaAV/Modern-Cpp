@@ -34,7 +34,7 @@ where
 ## Related links
 * [swap_map_key](../swap_map_key) 
 
-[back to algorithm](../)
+[back to STL section](../)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

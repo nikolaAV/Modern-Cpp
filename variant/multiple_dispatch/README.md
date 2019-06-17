@@ -1,4 +1,4 @@
-# Multiple dispatch in C++ with `std::variant` and 'std::visit' (C++17)
+# Multiple dispatch in C++17 with `std::variant` and `std::visit`
 TBD
 ```cpp
 ```

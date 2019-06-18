@@ -51,7 +51,7 @@ void intersect(const triangle&, const square&) {
 using shape  = variant<circle,square,triangle>; 
 void intersect(const shape& left, const shape& right) {
    visit(
-      [](auto s1, auto s2) { intersect(s1,s2); }
+      [](auto const& s1, auto const& s2) { intersect(s1,s2); }
       ,left,right
    );
 }

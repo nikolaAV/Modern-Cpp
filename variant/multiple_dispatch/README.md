@@ -38,7 +38,7 @@ class circle     {...};
 class square     {...};
 class triangle   {...};
 ```
-Possible number of combinations to be intersected is 9.
+The total number of possible combinations to be intersected is 9.
 ```cpp
 void intersect(const circle&, const circle&);
 void intersect(const circle&, const square&);
@@ -86,6 +86,7 @@ That is all.
 ## Further informations
 * [A polyglot's guide to multiple dispatch](https://eli.thegreenplace.net/2016/a-polyglots-guide-to-multiple-dispatch/) by Eli Bendersky
 * [Double dispatch and Visitor pattern](https://gieseanw.wordpress.com/2018/12/29/stop-reimplementing-the-virtual-table-and-start-using-double-dispatch/)
+* [How To Use std::visit With Multiple Variants](https://www.bfilipek.com/2018/09/visit-variants.html) by Bartlomiej Filipek 
 * [Open Multi-Methods for C++](http://www.stroustrup.com/multimethods.pdf) by Peter Pirkelbauer, Yuriy Solodkyy, Bjarne Stroustrup
 
 ## Related links

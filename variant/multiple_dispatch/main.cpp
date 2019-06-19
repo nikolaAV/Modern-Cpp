@@ -4,6 +4,7 @@
 /**
    How To Use std::visit With Multiple Variants
    \see https://www.bfilipek.com/2018/09/visit-variants.html
+        https://github.com/nikolaAV/Modern-Cpp/tree/master/variant/multiple_dispatch
 */
 
 using namespace std;

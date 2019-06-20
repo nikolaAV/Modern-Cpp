@@ -24,7 +24,7 @@ namespace event
 {
    struct open {
       template <typename T>
-      state::type operator()(T)             { return T{}; }; // do nothing
+      state::type operator()(const T& t)    { return t; }; // do nothing
       state::type operator()(state::closed) { return state::opened{}; }
    };
 

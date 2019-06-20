@@ -1,12 +1,13 @@
 # State machines are represented by means [`std::variant`](https://en.cppreference.com/w/cpp/utility/variant) (C++17)
 So what exactly is a state machine? There is a [formal definition](https://en.wikipedia.org/wiki/Finite-state_machine) but probably it would be easier to start with an example statecharted like  
 ![door_state](./door_states.png)
-It shows that there are three possible states for the dorr and four events which can be applicable. 
+It shows that there are three possible states for the door and four events which can be applicable. 
 Please also note the each particular event can be accepted if the door has an appropriate state. 
 * Door Opened -> CloseEvent -> Door Closed
 * Door Closed -> OpenEvent -> Door Opened
 * Door Closed -> LockEvent -> Door Locked
-* Door Locked -> UnlockEvent -> Door Closed  
+* Door Locked -> UnlockEvent -> Door Closed 
+
 Let's each separate state be represented by singular C++ type. 
 The main motivation is to make illegal states unrepresentable by embedding the variables only needed in one state inside a C++ type representing the state.  
 All the C++ types are then combined in a std::variant object to represent the current state. 

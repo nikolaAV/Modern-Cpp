@@ -21,7 +21,7 @@ namespace event
 {
    struct do_nothing {
       template <typename T>
-      state::type operator()(T) const noexcept(noexcept(T{})){ return T{}; }
+      state::type operator()(const T& t) const noexcept { return t; }
    };
 
    /**

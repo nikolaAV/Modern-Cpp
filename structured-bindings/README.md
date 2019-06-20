@@ -1,48 +1,11 @@
-# Adding C++17 structured bindings support to your classes
-
+# Structured bindings.
 C++17 adds [structured bindings](https://isocpp.org/files/papers/P0144R1.pdf) for
-- tuple-like objects (`std::tuple`, `std::pair`)
-- classes where __all__ the non-static member are _public_ or all public-only non-static members are in a single direct base class.   
+* tuple-like objects ([`std::tuple`](https://en.cppreference.com/w/cpp/utility/tuple), [`std::pair`](https://en.cppreference.com/w/cpp/utility/pair))
+* classes where all the non-static member are public or all public-only non-static members are in a single direct base class.
 
-Any other complex classes need additional code to be decomposed.
-All you need to do is tell the compiler 
-1) how many variables you want to expose
-2) the types of them
-3) how to get at the values.
+## Further informations
+* [Structured binding declaration (since C++17)](https://en.cppreference.com/w/cpp/language/structured_binding)
 
-```cpp
-class my_type {
-    // data ...
-
-public:
-
-// Step 3. Getters for each one
-   template <std::size_t N>
-   decltype(auto) get() const { ...???
-};
-
-namespace std {
-    // Step 1. How many elemenys?
-    template<>
-    class tuple_size<Config>
-        : public std::integral_constant<std::size_t, ???> {};
-
-    // Step 2. What is an element type?
-    template<std::size_t N>
-    class tuple_element<N, Config> {
-        public:
-        using type = decltype(std::declval<Config>().get<N>());
-    };
-}
-
-int main()
-{
-   auto [x,y,z,...] = my_type{...};
-```
-
-# Related links
-* [Original Article](https://blog.tartanllama.xyz/structured-bindings/) by Simon Brand
-
-## Supported Compilers
-* clang 5.0.0
-* gcc 7.2.0
+## Related links
+* [Adding C++17 structured bindings support to your classes](./user_type_support) describes what you need to do so that your class/struct is applicable in structured bindings declaration.
+* [Direct initialization](./direct_initialization) allows to define multiple variables in init- `if`, `switch`, `for` statements

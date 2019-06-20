@@ -1,5 +1,5 @@
 # State machines are represented by means [`std::variant`](https://en.cppreference.com/w/cpp/utility/variant) (C++17)
-So what exactly is a state machine? There is a [formal definition](https://en.wikipedia.org/wiki/Finite-state_machine) it would be easier to start with an example statecharted like  
+So what exactly is a state machine? There is a [formal definition](https://en.wikipedia.org/wiki/Finite-state_machine) but probably it would be easier to start with an example statecharted like  
 ![door_state](./door_states.png)
 It shows that there are three possible states for the dorr and four events which can be applicable. 
 Please also note the each particular event can be accepted if the door has an appropriate state. 

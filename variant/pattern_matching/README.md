@@ -81,11 +81,12 @@ std::visit(
 * [Open Pattern Matching for C++](http://www.stroustrup.com/OpenPatternMatching.pdf) by Yuriy Solodkyy, Gabriel Dos Reis, Bjarne Stroustrup
 * [Pattern Matching, P1260R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1260r0.pdf) by Michael Park
 * [Variant Visitation](https://mpark.github.io/programming/2015/07/07/variant-visitation/)
-* [Let’s overload lambdas!](https://arne-mertz.de/2018/05/overload-build-a-variant-visitor-on-the-fly/) by Arne Mertz
+* [Letâ€™s overload lambdas!](https://arne-mertz.de/2018/05/overload-build-a-variant-visitor-on-the-fly/) by Arne Mertz
 * [Roots of a quadratic equation](https://www.walletfox.com/course/patternmatchingcpp17.php) on walletfox.com
 
 ## Related links
 * [Overloaded Lambdas](../../lambda/lambda_overloaded)
+* ['match' and the Power of Pattern Matching](https://github.com/nikolaAV/skeleton/tree/master/match)
 
 [back to 'variant' section](../)
 

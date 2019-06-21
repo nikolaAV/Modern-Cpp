@@ -11,4 +11,4 @@ Yes, it's possible if these types are inclosed by [`std::variant`](https://en.cp
 * [Everything You Need to Know About std::variant from C++17](https://www.bfilipek.com/2018/06/variant.html) by Bartlomiej Filipek.
 
 ## Related links
-TBD
+* ['match' and the Power of Pattern Matching](https://github.com/nikolaAV/skeleton/tree/master/match)

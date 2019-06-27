@@ -38,7 +38,7 @@ class circle     {...};
 class square     {...};
 class triangle   {...};
 ```
-The total number of possible combinations to be intersected is 9.
+The total number of possible combinations which can be intersected is 9.
 ```cpp
 void intersect(const circle&, const circle&);
 void intersect(const circle&, const square&);

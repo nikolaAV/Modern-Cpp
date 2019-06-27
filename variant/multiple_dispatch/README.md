@@ -1,7 +1,7 @@
 # Multiple dispatch in C++17 with `std::variant` and `std::visit`
 In C++/OOP terms, multi-dispatch is the ability to choose which version of a function to call based on [dynamic types](https://en.cppreference.com/w/cpp/language/type#Dynamic_type) of the parameters of [static types](https://en.cppreference.com/w/cpp/language/type#Static_type) passed to the function call. 
 Or the other words, the function accepting parameters of [polymorphic type](https://en.cppreference.com/w/cpp/language/object#Polymorphic_objects) should initiate a call according to real types hidden by the interface.  
-If we take the classic example of [the Shape Inheritance](http://www.ntu.edu.sg/home/ehchua/programming/java/j3b_oopinheritancepolymorphism.html#zz-4.2) we would like the function __intersect__ defined as 
+If we take the classic example of [the Shape Inheritance](http://python.cs.southern.edu/csharpbook/html/ch12s08.html) we would like the function __intersect__ defined as 
 ```cpp
 void intersect(const shape& left, const shape& right) {
     // ...

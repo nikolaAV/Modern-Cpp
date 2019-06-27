@@ -29,7 +29,7 @@ If the calling function depends on the two arguments, then we can implement it b
 * dynamic_cast to get [RTTI](https://en.cppreference.com/w/cpp/types/type_info) ability
 * well-known [_double dispatch_](https://gieseanw.wordpress.com/2018/12/29/stop-reimplementing-the-virtual-table-and-start-using-double-dispatch/) mechanism.
    
-The problem is getting obvious when the number of input arguments is quite value. A solution based on polymorphic type cannot be acceptable because OOP style does not support multi-methods directly.  
+The problem is getting obvious when the number of input arguments gets quite value. A solution based on polymorphic type cannot be acceptable because OOP style does not support multi-methods directly.  
 Is there alternative?  
 Let's try to consider an approach called [static polymorphism](https://beginnersbook.com/2013/04/runtime-compile-time-polymorphism/) which can be implemented by means [`std::variant`](https://en.cppreference.com/w/cpp/utility/variant) and [`std::visit`](https://en.cppreference.com/w/cpp/utility/variant/visit).  
 So we have related types like _the Shape Inheritance_ mentioned above but the inheritance is no longer required. 

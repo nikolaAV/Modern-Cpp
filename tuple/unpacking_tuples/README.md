@@ -92,6 +92,6 @@ assert(0==v1 && 0==v2);
 
 ## Related links
 * [Enumerating elements of different types in a heterogeneous container (C++17)](https://github.com/nikolaAV/Modern-Cpp/tree/master/variant/heterogeneous_container) by nikolaAV on GitHub
-
+* Usage example. [C++17 zip_iterator](https://github.com/nikolaAV/skeleton/tree/master/algorithm/zip_iterator) 
 ## Supported Compilers
 * Microsoft (R) C/C++ Optimizing Compiler Version 19.10.xyz ([Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-express/))

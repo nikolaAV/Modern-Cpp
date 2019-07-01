@@ -8,7 +8,7 @@ Some snippets of codecase in this section explain how to put the STL to the best
 * [`std::map` update key](./update_map_key) and [swap key](./swap_map_key) Since C++17 there is a way of efficiently modifying the keys of std::map items without memory relocation.
 
 ## Further informations
-* TBD
+* [STL Learning Resource](http://www.fluentcpp.com/STL/) by Jonathan Boccara
 
 ## Related links
 * [STL algorithms extensions](https://github.com/nikolaAV/skeleton/tree/master/algorithm) that is ones which are not shipped with the Standard Library.

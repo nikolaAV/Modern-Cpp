@@ -81,7 +81,7 @@ intersect(s0,s1);
 intersect(s1,s2);
 intersect(s2,s0);
 ```
-`std::visit` does all magic work for you. It finds an overloaded 'intersect' with the best match dispatches and dispatches invocation into it with objects of real types for further processing.  
+`std::visit` does all magic work for you. It finds an overloaded 'intersect' with the best match and dispatches invocation into it with objects of real types for further processing.  
 
 ## Further informations
 * [A polyglot's guide to multiple dispatch](https://eli.thegreenplace.net/2016/a-polyglots-guide-to-multiple-dispatch/) by Eli Bendersky

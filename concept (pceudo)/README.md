@@ -10,4 +10,5 @@ A few alternative routes until C++ language supports [them](http://en.cppreferen
 
 ## Related links
 * Example of an approach based on `std::enable_if` to make set of overloaded [XOR cipher algorithm](https://github.com/nikolaAV/skeleton/blob/master/algorithm/simple_xor).
+* [Example](./enable_if_ctor) how to disable partially member function templates.
 * `static_assert` is another mechanism to specify sort of types allowed as input parameter in [insert_sorted algorithm](https://github.com/nikolaAV/skeleton/tree/master/algorithm/insert_sorted) 

@@ -43,7 +43,7 @@ propagate_const_ptr: widget::foo(const)
 * [std::experimental::propagate_const](http://en.cppreference.com/w/cpp/experimental/propagate_const)
 
 ## Related links
-* [Function overloading. const-object & const-function](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-const-object--const-function)
+* [Function overloading. const-object & const-function](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/questions/README.md#function-overloading-const-object--const-function)
 
 ## Compilers
 * [GCC 7.2.0](https://wandbox.org/)

@@ -17,6 +17,7 @@
    the member function template is a better match (!!!) for copying a C than the copy constructor.
 
    /see https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/questions/README.md#special-member-function-generation-constructor-template-part-2
+   /see https://github.com/nikolaAV/Modern-Cpp/tree/master/concept%20(pceudo)/enable_if_ctor
 */
 
 using namespace std;
@@ -48,7 +49,7 @@ namespace v2
 {
    /**
       Attempt 1
-      Now let’s replace the two string constructors with one generic constructor perfect
+      Now letâ€™s replace the two string constructors with one generic constructor perfect
       forwarding the passed argument to the member name
 
       There is an unpleasant issue here,
@@ -103,7 +104,7 @@ namespace v4
 {
    /**
       Attempt 3
-      Now let’s replace the two string constructors with one 'string_view'
+      Now letâ€™s replace the two string constructors with one 'string_view'
       passed argument to the member name
       No overhead for the temporary 'std::string' creation 
       in case if an input argument is the literal constant (rvalue) is required

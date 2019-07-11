@@ -58,6 +58,7 @@ inline constexpr bool is_range_v = std::experimental::is_detected_v<begin_t,T>
 ## Related links
 * [iterator_type_traits](https://github.com/nikolaAV/skeleton/tree/master/iterator_traits2)
 * [algorithm 'XOR cipher'. how to make overloads](https://github.com/nikolaAV/skeleton/tree/master/algorithm/simple_xor)
+* [how to detect overloads](../../traits/custom_safe_fallback)
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)
 * [clang 7.0.0](https://wandbox.org/)

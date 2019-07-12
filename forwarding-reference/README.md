@@ -30,7 +30,7 @@ The macro made the code easier to type and read.
 ![rvalue vs forwarding reference](https://www.walletfox.com/course/cheatsheetsSource/rvalue_vs_forwarding.png)
 * [Perfect forwarding and universal references in C++](http://eli.thegreenplace.net/2014/perfect-forwarding-and-universal-references-in-c/) by Eli Bendersky
 * [Capturing perfectly-forwarded objects in lambdas](https://vittorioromeo.info/index/blog/capturing_perfectly_forwarded_objects_in_lambdas.html) by Vittorio Romeo
-* [how not to mess up forwarding in C++11/14/17](https://www.walletfox.com/course/cheatsheetsSource/perfect_forwarding.png) from @walletfox
+* [how not to mess up forwarding](https://www.walletfox.com/course/cheatsheetsSource/perfect_forwarding.png), and [reference collapsing and perfect forwarding](https://www.walletfox.com/course/cheatsheetsSource/reference_collapsing_corr.png) in C++11/14/17 from @walletfox
 
 ## Related links
 * [Modern-Cpp::rvalue](../rvalue)

@@ -27,6 +27,7 @@ Fortunately, C++ let us implement both.
 * [min & max for any number of arguments](./min_max)
 * [Validating ISBNs](./isbn)
 * [accumulate algorithm with constexpr lambda](../lambda/lambda_constexpr)
+* `constexpr` [helps us detect] (https://www.walletfox.com/course/cheatsheetsSource/constexpr_undefined.png) (taken from @walletfox) [undefined behaviour](https://en.cppreference.com/w/cpp/language/ub).
 
 ## Further informations
 * [constexpr specifier](https://en.cppreference.com/w/cpp/language/constexpr)

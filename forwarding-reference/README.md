@@ -10,7 +10,7 @@ void foo(T1&& arg1, T2&& arg2){
 ```
 The && in this template code means that the values can be `l-value` or `r-value` references depending on whether the values they bind to are `l-values` or `r-values`.
 `std::forward` allows to pass on this information to __bar__.  
-But it’s a lot of code to express that, it’s annoying to type every time, and it takes up some space when reading.  
+But itâ€™s a lot of code to express that, itâ€™s annoying to type every time, and it takes up some space when reading.  
 To reducing this "noise" [Vittorio Romeo proposes](https://vittorioromeo.info/index/blog/capturing_perfectly_forwarded_objects_in_lambdas.html) to use the following macro:
 ```cpp
 #define FWD(...) ::std::forward<decltype(__VA_ARGS__)>(__VA_ARGS__)
@@ -26,7 +26,8 @@ void foo(T1&& arg1, T2&& arg2){
 The macro made the code easier to type and read.
 
 ## Further Informations
-* [Universal References in C++11](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers) by Scott Meyers
+* [Universal References in C++11](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers) by Scott Meyers  
+![rvalue vs forwarding reference](https://www.walletfox.com/course/cheatsheetsSource/rvalue_vs_forwarding.png)
 * [Perfect forwarding and universal references in C++](http://eli.thegreenplace.net/2014/perfect-forwarding-and-universal-references-in-c/) by Eli Bendersky
 * [Capturing perfectly-forwarded objects in lambdas](https://vittorioromeo.info/index/blog/capturing_perfectly_forwarded_objects_in_lambdas.html) by Vittorio Romeo
 

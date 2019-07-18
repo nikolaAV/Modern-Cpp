@@ -23,7 +23,7 @@ else
 if (auto product = lookup(prices,"apples"))
    *product =3.14;
 ```
-where 'lookup' declared as
+where ['lookup'](./main.cpp) declared as
 ```cpp
 template <typename ContainerT, typename KeyT>
 std::variant<ContainerT::iterator_to_value> lookup(ContainerT& c, KeyT&& k);

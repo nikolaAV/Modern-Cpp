@@ -6,6 +6,7 @@ Some snippets of codecase in this section explain how to put the STL to the best
 * [`is_transparent` or Heterogeneous Lookup in Ordered Containers](./is_transparent) the ability to search an associative container with a key of type which is different to element type stored in the container.
 * [shift](./shift) How to shift elements inside the container?
 * [`std::map` update key](./update_map_key) and [swap key](./swap_map_key) Since C++17 there is a way of efficiently modifying the keys of std::map items without memory relocation.
+* [`std::optional`](./optional) allows you to make code simpler.
 
 ## Further informations
 * [STL Learning Resource](http://www.fluentcpp.com/STL/) by Jonathan Boccara

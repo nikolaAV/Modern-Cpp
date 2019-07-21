@@ -28,6 +28,7 @@ Fortunately, C++ let us implement both.
 * [Validating ISBNs](./isbn)
 * [accumulate algorithm with constexpr lambda](../lambda/lambda_constexpr)
 * `constexpr` [helps us detect](https://www.walletfox.com/course/cheatsheetsSource/constexpr_undefined.png) (taken from @walletfox) [undefined behaviour](https://en.cppreference.com/w/cpp/language/ub).
+* [`std::tuple<chars...>` initialized with pure C string literals](../tuple/init_from_string_literal)
 
 ## Further informations
 * [constexpr specifier](https://en.cppreference.com/w/cpp/language/constexpr)

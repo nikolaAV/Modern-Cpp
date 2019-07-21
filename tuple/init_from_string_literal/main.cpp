@@ -3,7 +3,9 @@
 /**
    Declaring Compile-Time std::tuple of characters initialized with pure C string literals
 
-   "Hello, World!" ---> constexpr std::tuple {'H','e','l','l','o',',',' ','W','o','r','l','d','!'} 
+   "Hello, World!" ---> constexpr std::tuple {'H','e','l','l','o',',',' ','W','o','r','l','d','!'}
+   
+   \see https://github.com/nikolaAV/Modern-Cpp/tree/master/tuple/init_from_string_literal
 */
 
 template <std::size_t... idx>

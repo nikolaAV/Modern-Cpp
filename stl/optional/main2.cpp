@@ -7,6 +7,7 @@
    \see https://www.fluentcpp.com/2019/07/16/expressiveness-nullable-types-and-composition-part-1/
         https://www.bfilipek.com/2018/06/optional-examples-wall.html
         https://github.com/rvarago/absent
+        https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/optional#example-2-chain-building-for-function-calls
 */
 
 namespace monad
@@ -69,7 +70,7 @@ void test_2(bool positive)
 {
    /**
       Thanks to the short circuit rules and the evaluation happening from left to right 
-      the functions won’t be executed if the previous one fails when a function returns empty std::variant.
+      the functions wonâ€™t be executed if the previous one fails when a function returns empty std::variant.
       \see https://en.cppreference.com/w/cpp/language/operator_logical
            https://en.wikipedia.org/wiki/Short-circuit_evaluation
    */

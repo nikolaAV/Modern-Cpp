@@ -8,7 +8,7 @@
 	Rather than checking for map::end you can use std::optional.
 
 	\see https://www.bfilipek.com/2018/06/optional-examples-wall.html
-	     https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/optional
+	     https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/optional#example-1-cleaner-interface-for-associative_containerfind
 */
 
 namespace concepts

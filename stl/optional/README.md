@@ -68,13 +68,13 @@ The code became slightly more complex to understand, and therefore to change.
 How do you like the following notation?  
 __(query->person)and_then(person->address)and_then(address->zip_code)__  
 Where __and_then__ is the usual function composition: evaluates the first function and then feeds its return value into the second function. 
-Such pipeline of function applications can be reduced into a ìsingle functionî, which is the composition of the whole pipeline
+Such pipeline of function applications can be reduced into a ‚Äúsingle function‚Äù, which is the composition of the whole pipeline
 ```cpp
 if (auto z = optional{<query_input>} >> get_query >> get_person >> get_address >> get_zip_code) {
 // use z, ...
 }  
 ```
-where overloaded `operator>>` is a analog of __and_then__ i.e. it's a composition function.
+where [overloaded `operator>>`](./main2.cpp) is a analog of __and_then__ i.e. it's a composition function.
 > Fortunately, `std::optional<T>` is getting a [nice monadic interface](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0798r3.html) soon, and monads are, essentially, all about composition.  
 > Another way of implementing __and_then__ is now under consideration in the C++ ISO Committee. See [`expected<T,E>` from boost](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0762r0.pdf)
 

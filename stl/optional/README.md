@@ -62,9 +62,8 @@ if (!z) return;
 
 // use z, ...
 ```
-Hmm..It seems to look relatively more verbose that it can be. 
-The code would have been more impressive if we had managed to compose or chain the required operations in one sequence with an error handling left out of scope consideration. 
-The code became slightly more complex to understand, and therefore to change. 
+Hmm...  It seems to look relatively more verbose that it can be. 
+The code would have been more expressive if we had managed to compose or chain the required operations in one sequence with an error handling left out of scope consideration. 
 How do you like the following notation?  
 __(query->person)and_then(person->address)and_then(address->zip_code)__  
 Where __and_then__ is the usual function composition: evaluates the first function and then feeds its return value into the second function. 

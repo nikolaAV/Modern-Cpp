@@ -26,6 +26,7 @@ int main()
    sort(vector);
    sort(list);
 ```
+where code of "magic" _has_function_sort_v_ can be found [here](./main.cpp)
 
 ## Further informations
 * [Original Article](http://scrutator.me/post/2017/04/10/has_function_metaprogramming.aspx) by Evgeniy Shcherbina

@@ -8,6 +8,7 @@
 
    see https://www.fluentcpp.com/2019/08/20/a-concise-implementation-of-fizzbuzz-with-stdoptional/
        https://en.wikipedia.org/wiki/Fizz_buzz
+       https://github.com/nikolaAV/Modern-Cpp/tree/master/stl/optional
 */
 
 /**

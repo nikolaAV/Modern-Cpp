@@ -77,6 +77,31 @@ where [overloaded `operator>>`](./main2.cpp) is a analog of __and_then__ i.e. it
 > Fortunately, `std::optional<T>` is getting a [nice monadic interface](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0798r3.html) soon, and monads are, essentially, all about composition.  
 > Another way of implementing __and_then__ is now under consideration in the C++ ISO Committee. See [`expected<T,E>` from boost](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0762r0.pdf)
 
+### Example 3. [Fizz buzz](https://en.wikipedia.org/wiki/Fizz_buzz) game.
+Following the imperative programming style the most common implementation could be:
+```cpp
+std::string fizzbuzz(size_t n)
+{
+    if(n%3 == 0 && n%5 == 0)
+        return "FizzBuzz";
+    else if (n%3 == 0)
+        return "Fizz";
+    else if (n%5 == 0)
+        return "Buzz";
+    else
+        return std::to_string(n);
+}
+```
+Alternative way of the implementation may be declarative. I.e. instead of saying "How" we'd better have a tendency  to use "What":
+```cpp
+string fizzbuzz(size_t n) {
+   return (if_factor(n,3,"Fizz") + if_factor(n,5,"Buzz")).value_or(to_string(n));
+}
+```
+Of course, to do that `std::optional<>` if_factor(...) and  `std::optional<>` `operator+`(...) must be implemented. 
+You can look at them by referencing [here](./main3.cpp).
+
+
 
 ## Further informations
 * [`std::optional`](https://en.cppreference.com/w/cpp/utility/optional)

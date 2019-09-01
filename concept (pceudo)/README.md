@@ -42,7 +42,7 @@ note: the required expression '(a + a)' would be ill-formed
 ```
 _A concept_ at least gives you a chance to write language constructs in the code that can give better direction to the user.  
 Is there a way to use _concepts_ in compilers that do not support them?
-Here is an example of one of possibility:
+Here is an example of [one of possibility](../stl/optional/main3.cpp):
 ```cpp
 namespace concepts {
 
@@ -72,4 +72,4 @@ auto operator+(const std::optional<T>& left, const std::optional<T>& right) {
 ## Related links
 * Example of an approach based on `std::enable_if` to make set of overloaded [XOR cipher algorithm](https://github.com/nikolaAV/skeleton/blob/master/algorithm/simple_xor).
 * [Example](./enable_if_ctor) how to disable partially member function templates.
-* `static_assert` is another mechanism to specify sort of types allowed as input parameter in [insert_sorted algorithm](https://github.com/nikolaAV/skeleton/tree/master/algorithm/insert_sorted) 
+* `static_assert` is another mechanism to specify sort of types allowed as input parameter in [insert_sorted algorithm](https://github.com/nikolaAV/skeleton/tree/master/algorithm/insert_sorted) or [Fizz buzz game implemented with `std::optional`](../stl/optional/) 

@@ -100,6 +100,7 @@ where
 * [How to search a C++ set with another type than its key](https://www.fluentcpp.com/2017/06/09/search-set-another-type-key/) by Jonathan Boccara
 * [`std::set::find`](https://en.cppreference.com/w/cpp/container/set/find)
 * [Heterogeneous Lookup in Associative Containers](https://abseil.io/tips/144)
+* [Self-identification for SFINAE](https://youtu.be/PFdWqa68LmA?t=1843) by Stephen Dewhurst on CppCon 2017
 ## Related links
 * [back to stl section](../)
 ## Compilers

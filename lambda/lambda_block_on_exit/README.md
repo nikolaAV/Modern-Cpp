@@ -27,6 +27,7 @@ Until the proposal [P0052R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/
 * [Use a final_action object to express cleanup if no suitable resource handle is available](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#e19-use-a-final_action-object-to-express-cleanup-if-no-suitable-resource-handle-is-available) from C++ Core Guidelines
 
 ## Related links
+* [A lamda extends language feature](../lambda_lock)
 * [back to the section](../)
 
 ## Compilers

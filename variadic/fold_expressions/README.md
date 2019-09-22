@@ -48,6 +48,7 @@ bool contains_none(const Container& c, Values&&... vals)
 
 ## Related links
 * Usage Example [zip iterator](https://github.com/nikolaAV/skeleton/tree/master/algorithm/zip_iterator)
+* [predicate composition](./../predicate_composition)
 * [Jump to variadic section](../)
 
 ## Compilers

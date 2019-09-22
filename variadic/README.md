@@ -17,3 +17,6 @@ Several examples how to reduce function parameter pack over a binary operator.
 
 ## [Variadic Indices](./variadic_indices)
 Variadic list of indices to access the corresponding element of the container.
+
+## [Predicate Composition](./predicate_composition)
+How to compose more complex type traits based on several primitives.

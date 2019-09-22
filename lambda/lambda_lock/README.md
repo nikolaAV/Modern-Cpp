@@ -28,7 +28,7 @@ template<typename F> void lock( std::mutex& m, F f )
 
 ## Related links
 * [what does lambda capture?](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/questions/README.md#lambda-capture-of-globals)
-* [block on exit](/../lambda_block_on_exit)
+* [block on exit](./../lambda_block_on_exit)
 
 ## Compilers
 * [GCC 5.1.0](https://wandbox.org/)

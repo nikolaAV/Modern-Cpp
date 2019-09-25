@@ -99,7 +99,7 @@ inline constexpr bool Happy_v = Composer<T,
 ```
 
 ## Further informations
-* [Predicate Composition]() by Stephen Dewhurst on CppCon 2017
+* [Predicate Composition](https://youtu.be/PFdWqa68LmA?t=2080) by Stephen Dewhurst on CppCon 2017
 
 ## Related links
 * [contains_any_all_none with fold expressions](./../fold_expressions#container-any-all-none)

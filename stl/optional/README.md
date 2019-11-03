@@ -101,7 +101,7 @@ string fizzbuzz(size_t n) {
 Of course, to do that `std::optional<>` if_factor(...) and  `std::optional<>` `operator+`(...) must be implemented. 
 You can look at them by referencing [here](./main3.cpp).
 
-
+### Example 4. [Lazy Initialisation](https://www.bfilipek.com/2019/10/lazyinit.html#the-third-way-stdoptional-c17).
 
 ## Further informations
 * [`std::optional`](https://en.cppreference.com/w/cpp/utility/optional)

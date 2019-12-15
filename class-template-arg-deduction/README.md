@@ -18,6 +18,8 @@ With C++17, we get class template argument deduction. It is based on template ar
 ## Further informations
 * [Class Template Argument Deduction](https://arne-mertz.de/2017/06/class-template-argument-deduction/) by Arne Mertz
 * [Template argument deduction for class templates](http://www.bfilipek.com/2017/01/cpp17features.html#template-argument-deduction-for-class-templates) by Bartlomiej Filipek
+* [CTAD on habr](https://habr.com/ru/post/461963/) by igorsemenov
+* [temp.deduct.guide](https://timsong-cpp.github.io/cppwp/n4659/temp.deduct.guide) from C++ Working Draft, 2017
 
 ## Related links
 

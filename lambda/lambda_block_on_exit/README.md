@@ -25,6 +25,7 @@ Until the proposal [P0052R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/
 * [Beautiful code: final_act from GSL](https://www.bfilipek.com/2017/04/finalact.html) by Bartlomiej Filipek
 * [P0052R3 - Generic Scope Guard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0052r3.pdf) `std::scope_exit` proposal from Peter Sommerlad and Andrew L. Sandoval
 * [Use a final_action object to express cleanup if no suitable resource handle is available](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#e19-use-a-final_action-object-to-express-cleanup-if-no-suitable-resource-handle-is-available) from C++ Core Guidelines
+* [ON_EXIT - Combining Automatic Destruction and Lambdas](https://blog.galowicz.de/2016/02/21/on_exit_macro/) by Jacek Galowicz
 
 ## Related links
 * [A lamda extends language feature](../lambda_lock)

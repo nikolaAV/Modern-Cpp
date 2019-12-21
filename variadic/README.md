@@ -20,3 +20,6 @@ Variadic list of indices to access the corresponding element of the container.
 
 ## [Predicate Composition](./predicate_composition)
 How to compose more complex type traits based on several primitives.
+
+## [Type Lists](https://github.com/nikolaAV/skeleton/tree/master/type_list)
+One of the central data structure in metaprogramming is the typelist, which, as its name implies, is a list containing types.

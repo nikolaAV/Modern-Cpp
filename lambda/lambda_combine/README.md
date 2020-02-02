@@ -25,6 +25,7 @@ int main()
 ```
 ## Further informations
 * [std::logical_and](https://en.cppreference.com/w/cpp/utility/functional/logical_and), [std::logical_or](https://en.cppreference.com/w/cpp/utility/functional/logical_or)
+* [How to Combine Functions with Logical Operators in C++](https://www.fluentcpp.com/2020/01/31/how-to-combine-functions-with-logical-operators-in-c/) by Jonathan Boccara
 
 ## Related links
 * [function concatenation with lambda expression](../lambda_concat/README.md#function-concatenation-with-lambda-expression)

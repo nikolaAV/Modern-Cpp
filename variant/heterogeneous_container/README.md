@@ -49,6 +49,7 @@ then applying ["The overload lambda Pattern"](https://www.bfilipek.com/2019/02/2
 * [Original Article](https://habrahabr.ru/post/332084/) by JegernOUTT
 * [std::visit](http://en.cppreference.com/w/cpp/utility/variant/visit)
 * [Pattern for visitation of `std::variant`](https://www.bfilipek.com/2019/02/2lines3featuresoverload.html)
+* [Runtime Polymorphism with `std::variant` and `std::visit`](https://www.bfilipek.com/2020/04/variant-virtual-polymorphism.html) by Bartlomiej Filipek
 
 ## Related links
 * [Unpacking & enumerating Tuples in C++14](../../tuple/unpacking_tuples) by nikolaAV on GitHub

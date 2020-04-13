@@ -34,6 +34,7 @@ The other one is the part between the `<a ...>` and `</a>`, which contains the l
 ## Further informations
 * [Regular expressions library](https://en.cppreference.com/w/cpp/regex)
 * [Modified ECMAScript regular expression grammar](https://en.cppreference.com/w/cpp/regex/ecmascript)
+* [C++ Regex 101](https://www.fluentcpp.com/2020/02/28/c-regex-101-simple-code-for-simple-cases-with-regexes/) by Jonathan Boccara
 
 ## Related links
 * [Regular expressions. for_each algorithm](https://github.com/nikolaAV/skeleton/tree/master/algorithm/regex_for_each)

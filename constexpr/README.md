@@ -27,9 +27,12 @@ Fortunately, C++ let us implement both.
 * [min & max for any number of arguments](./min_max)
 * [Validating ISBNs](./isbn)
 * [accumulate algorithm with constexpr lambda](../lambda/lambda_constexpr)
+* [sequence of key-value elements at compile time](https://github.com/nikolaAV/skeleton/tree/master/algorithm/static_kv_storage)
+* [list of types](https://github.com/nikolaAV/skeleton/tree/master/type_list)
 * `constexpr` [helps us detect](https://www.walletfox.com/course/cheatsheetsSource/constexpr_undefined.png) (taken from @walletfox) [undefined behaviour](https://en.cppreference.com/w/cpp/language/ub).
 * [`std::tuple<chars...>` initialized with pure C string literals](../tuple/init_from_string_literal)
 * [compile time regular expressions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1433r0.pdf) by Hana Dusíková, [GitHub](https://github.com/hanickadot/compile-time-regular-expressions)
+* [JSON like configuration at compile time](https://github.com/nikolaAV/compile_time_configuration)
 
 ## Further informations
 * [constexpr specifier](https://en.cppreference.com/w/cpp/language/constexpr)

@@ -33,6 +33,7 @@ An easy way to compose a lambda with multiple overloaded function call syntax.
 * [2 Lines Of Code and 3 C++17 Features - The overload Pattern](https://www.bfilipek.com/2019/02/2lines3featuresoverload.html) by Bartlomiej Filipek
 * [The double functor trick](https://www.fluentcpp.com/2017/03/09/functors-are-not-dead-the-double-functor-trick/) by Jonathan Boccara
 * [The std::overload proposal](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0051r3.pdf)
+* [C++17 deduction guide, not needed in C++20](https://en.cppreference.com/w/cpp/language/using_declaration#Notes)
 
 ## Related links
 * [nikolaAV\::modern-cpp::heterogeneous-container](https://github.com/nikolaAV/Modern-Cpp/tree/master/variant/heterogeneous_container)

@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <vector>
 #include "tuple_for_each.h"
 
 using namespace std;
@@ -45,6 +46,14 @@ string to_string(const std::tuple<Args...>& t)
     return out.s+="}";
 }
 
+struct toVector {
+   vector<double> value;
+   void operator()(const double& v) {
+      value.push_back(v);
+   }
+};
+
+
 int main(int /*argc*/, char** /*argv[]*/)
 {
     const auto t = make_tuple(1,2.,"3",my_type{4});
@@ -53,6 +62,13 @@ int main(int /*argc*/, char** /*argv[]*/)
     tuple_::v3::for_each(t,[](const auto& v){ cout << v; });// <--- for_each ver.3
     cout << endl;
     tuple_::v4::for_each(t,[](const auto& v){ cout << v; });// <--- for_each ver.4
+    cout << endl;
+
+    auto t2 = make_tuple(3.14, 10);
+    tuple_::v5::for_each(t2, [](auto& v) { v *= 2; });
+    auto const res = tuple_::v5::for_each(t2, toVector{}).value;
+    for (auto& s : res)
+       cout << s << ", ";
     cout << endl;
 
     cout << "Press any key + <enter> to exit" << endl;

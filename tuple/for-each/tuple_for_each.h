@@ -3,6 +3,7 @@
 
 #include <tuple>
 #include <utility>
+#include <type_traits> // std::decay
 
 namespace tuple_
 {
@@ -125,6 +126,27 @@ namespace tuple_
          {
             return std::move(for_each(t,std::move(f),std::make_index_sequence<sizeof...(Args)>()));
          }
+    }
+
+    /**
+        Variant 5 (since C++17, if constexpr)
+    */
+    namespace v5
+    {
+       template<typename Tuple, std::size_t N>
+       struct VisitOne {
+          template <typename F> static F& apply(Tuple& t, F& f) {
+             if constexpr (N > 1)
+                VisitOne<Tuple, N - 1>::apply(t, f);
+             f(std::get<N - 1>(t));
+             return f;
+          }
+       };
+
+       template<typename Tuple, typename F>
+       F for_each(Tuple&& t, F f) {
+          return std::move(VisitOne<Tuple, std::tuple_size_v<std::decay_t<Tuple>>>::apply(t, f));
+       }
     }
 
 } // namespace: tuple_

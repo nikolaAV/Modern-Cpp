@@ -24,5 +24,5 @@ How to compose more complex type traits based on several primitives.
 ## [Type Lists](https://github.com/nikolaAV/skeleton/tree/master/type_list)
 One of the central data structure in metaprogramming is the typelist, which, as its name implies, is a list containing types.
 
-## [make_curried](../lambda/lambda_currying/main.cpp)
+## [make_curried](../lambda/lambda_currying/main2.cpp)
 Generic approach to make from any callable object a curried function `f(a1,a2,a3)`->`f(a1)(a2)(a3)`.

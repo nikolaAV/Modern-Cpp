@@ -13,17 +13,24 @@ can be called as
 ```
 where `f` is defined like that
 ```cpp
-   auto f = [](int a1){
-               return [=](int a2){
-                  return [=](int a3){
-                     return [=](int a4){
-                        return [=](int a5){
-                           foo(a1,a2,a3,a4,a5);
-                        };
+auto f = [](int a1){
+            return [=](int a2){
+               return [=](int a3){
+                  return [=](int a4){
+                     return [=](int a5){
+                        foo(a1,a2,a3,a4,a5);
                      };
                   };
                };
             };
+         };
+```
+It can be tedious to write all those parentheses as above. Let's provide some [syntactic sugar](./main2.cpp) to make an user be able to
+specify multiple arguments at the same time. However the curried function is still a unary function, and you’re just making it more convenient to use.
+```cpp
+auto const c1 = make_curried(foo,1,2);
+auto const c2 = c1(3);
+c2(4,5);
 ```
 
 ## Further informations

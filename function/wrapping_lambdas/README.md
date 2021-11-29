@@ -32,6 +32,7 @@ int main()
 
 ## Further informations
 * [std::function](https://en.cppreference.com/w/cpp/utility/functional/function)
+* [passing functions to functions](https://vittorioromeo.info/index/blog/passing_functions_to_functions.html) by Vittorio Romeo
 
 ## Related links
 * [std::variant value type in a STL container](https://github.com/nikolaAV/Modern-Cpp/tree/master/variant/heterogeneous_container) by nikolaAV on GitHub

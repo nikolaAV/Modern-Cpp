@@ -5,3 +5,5 @@ can by split the following topics:
 * [init in member declarations, Delegating & Inheriting constructors](http://scrutator.me/post/2012/12/18/new-ctors-p2.aspx)
 * [init-statement `for`, `switch`, `if` for multiple variables](../structured-bindings/direct_initialization)
 
+---
+![C++Initialization](./C++Initialization.png)

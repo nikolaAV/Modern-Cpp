@@ -65,6 +65,7 @@ s = visit(event::unlock{},s);
 * [Everything You Need to Know About std::variant from C++17](https://www.bfilipek.com/2018/06/variant.html#state-machines) by Bartlomiej Filipek
 
 ## Related links
+* [state-machine-light, another view](https://github.com/nikolaAV/state-machine-light)
 
 [back to 'variant' section](../)
 

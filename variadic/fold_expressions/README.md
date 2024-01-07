@@ -47,7 +47,7 @@ bool contains_none(const Container& c, Values&&... vals)
 * [Fold expressions](https://en.cppreference.com/w/cpp/language/fold) on cppreference.com
 
 ## Related links
-* Usage Example [zip iterator](https://github.com/nikolaAV/skeleton/tree/master/algorithm/zip_iterator)
+* Usage Example [zip iterator](https://github.com/nikolaAV/skeleton/tree/master/algorithm/zip_iterator), [expressive_condition](https://github.com/nikolaAV/skeleton/tree/master/algorithm/expressive_condition)
 * [predicate composition](./../predicate_composition)
 * [Jump to variadic section](../)
 

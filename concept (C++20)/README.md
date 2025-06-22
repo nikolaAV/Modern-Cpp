@@ -1,4 +1,4 @@
-# [C++20 concept] (https://en.cppreference.com/w/cpp/language/constraints.html)
+# [C++20 concept](https://en.cppreference.com/w/cpp/language/constraints.html)
 TBD
 
 

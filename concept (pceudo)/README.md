@@ -1,5 +1,5 @@
 # C++ concept ([Concepts Lite](https://isocpp.org/blog/2013/02/concepts-lite-constraining-templates-with-predicates-andrew-sutton-bjarne-s))
-A few alternative routes until C++ language supports [them](http://en.cppreference.com/w/cpp/language/constraints)
+A few alternative routes before C++20 supports [them](http://en.cppreference.com/w/cpp/language/constraints)
 
 ## "Why are concepts needed?" kick off.
 Let's suppose we have just finished writing 'sum' function for two [`std::optional`](https://en.cppreference.com/w/cpp/utility/optional) values. While it’s unusual to overload operators for standard types, in common sense it may be warranted since there is a [similar abstractions](https://wiki.haskell.org/Maybe) that other languages have and could have applications in other code bases.  
@@ -72,4 +72,5 @@ auto operator+(const std::optional<T>& left, const std::optional<T>& right) {
 ## Related links
 * Example of an approach based on `std::enable_if` to make set of overloaded [XOR cipher algorithm](https://github.com/nikolaAV/skeleton/blob/master/algorithm/simple_xor).
 * [Example](./enable_if_ctor) how to disable partially member function templates.
-* `static_assert` is another mechanism to specify sort of types allowed as input parameter in [insert_sorted algorithm](https://github.com/nikolaAV/skeleton/tree/master/algorithm/insert_sorted) or [Fizz buzz game implemented with `std::optional`](../stl/optional/) 
+* `static_assert` is another mechanism to specify sort of types allowed as input parameter in [insert_sorted algorithm](https://github.com/nikolaAV/skeleton/tree/master/algorithm/insert_sorted) or [Fizz buzz game implemented with `std::optional`](../stl/optional/)
+* [new facilities coming with C++20](../concept%20(C++20)) 

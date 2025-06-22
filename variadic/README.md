@@ -26,3 +26,6 @@ One of the central data structure in metaprogramming is the typelist, which, as 
 
 ## [make_curried](../lambda/lambda_currying/main2.cpp)
 Generic approach to make from any callable object a curried function `f(a1,a2,a3)`->`f(a1)(a2)(a3)`.
+
+## [Pulling a single item from parameter pack by its index](./pulling_by_index)
+Getting an item from input pack `Args...` in the easiest way

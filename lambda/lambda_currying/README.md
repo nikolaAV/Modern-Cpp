@@ -25,7 +25,7 @@ auto f = [](int a1){
             };
          };
 ```
-It can be tedious to write all those parentheses as above. Let's provide some [syntactic sugar](./main2.cpp) to make an user be able to
+It can be tedious to write all those parentheses as above. Let's provide some [syntactic sugar](./main2.cpp) or [C++20 syntactic sugar](./main3(C++20).cpp) to make an user be able to
 specify multiple arguments at the same time. However the curried function is still a unary function, and you’re just making it more convenient to use.
 ```cpp
 auto const f = make_curried(foo,1);

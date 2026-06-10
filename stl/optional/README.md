@@ -108,9 +108,11 @@ You can look at them by referencing [here](./main3.cpp).
 * [A Wall of Your std::optional Examples](https://www.bfilipek.com/2018/06/optional-examples-wall.html)
 * [The beauty of Total Functions](https://code.egym.de/the-beauty-of-total-functions-e8c35fee2d87) by Rafael Varago 
 ## Related links
+* [std::expected as a monad](https://github.com/nikolaAV/skeleton/tree/master/pipeline_constructor)
 * [back to stl section](../)
 ## Compilers
 * [GCC 7.3.0](https://wandbox.org/)
 * [clang 7.0.0](https://wandbox.org/)
 * Visual C++ 19.14 
 
+skeleton/pipeline_constructor/README.md

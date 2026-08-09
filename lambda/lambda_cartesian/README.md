@@ -30,6 +30,7 @@ C(print);
 ## Related links
 * [inner product](../lambda_inner) at compile time
 * [Other examples of compile time computing](../../constexpr)
+* [Cartesian product](https://github.com/nikolaAV/skeleton/tree/master/algorithm/cartesian_product)
 
 ## Compilers
 * [GCC 8.1.0](https://wandbox.org/)

@@ -47,25 +47,35 @@ using is_detected = typename detail::is_detected<Trait, void, Args...>::type;
 template <template <typename...> typename Trait, typename... Args>
 inline constexpr bool is_detected_v = is_detected<Trait,Args...>::value;
 
-template <typename T> 
-using begin_t  = decltype(std::begin(std::declval<T>()));
-template <typename T> 
-using end_t    = decltype(std::end(std::declval<T>()));
-
-template <typename T> 
-inline constexpr bool is_range_v = is_detected_v<begin_t,T> && is_detected_v<end_t,T>;
-
-template< typename Range, typename T>
-T accumulate( const Range& r, T init) {
-   static_assert(is_range_v<Range>);
-   return std::accumulate(std::begin(r),std::end(r),init);
-}
 
 // Usage
 
 #include <cassert>
 #include <vector>
 #include <set>
+
+template <typename Range> 
+using begin_t  = decltype(std::begin(std::declval<Range>()));
+template <typename Range> 
+using end_t    = decltype(std::end(std::declval<Range>()));
+
+template <typename Range> 
+inline constexpr bool is_range_v = is_detected_v<begin_t,Range> && is_detected_v<end_t,Range>;
+
+template <typename Range, typename T> 
+using assignable_t  = decltype(std::declval<T&>() = *std::begin(std::declval<Range>()));
+
+template <typename Range, typename T> 
+inline constexpr bool is_assignable_v  = is_detected_v<assignable_t,Range,T>;
+
+
+template< typename Range, typename T>
+T accumulate( const Range& r, T init) {
+   static_assert(is_range_v<Range>);
+   static_assert(is_assignable_v<Range,T>);
+
+   return std::accumulate(std::begin(r),std::end(r),init);
+}
 
 int main()
 {
@@ -75,7 +85,7 @@ int main()
 
    assert(45 == std::accumulate(std::begin(seq1),std::end(seq1),0));
    assert(45 == std::accumulate(std::begin(seq2),std::end(seq2),0));
-   assert(45 == std::accumulate(std::begin(seq3),std::end(seq3),0));
+   assert(45 == std::accumulate(std::begin(seq3),std::end(seq3),0.f));
 
    assert(45 == accumulate(seq1,0));
    assert(45 == accumulate(seq2,0));

@@ -54,7 +54,8 @@ inline constexpr bool is_range_v = std::experimental::is_detected_v<begin_t,T>
 ## Further informations
 * [C++ Detection Idiom Through the Years](https://people.eecs.berkeley.edu/~brock/blog/detection_idiom.php)
 * [Detection Idiom - A Stopgap for Concepts](https://blog.tartanllama.xyz/detection-idiom/)
-* [`std::experimental::is_detected`](https://en.cppreference.com/w/cpp/experimental/is_detected) 
+* [`std::experimental::is_detected`](https://en.cppreference.com/w/cpp/experimental/is_detected)
+* [Expressive C++ Template Metaprogramming](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/) by Jonathan Boccara
 ## Related links
 * [iterator_type_traits](https://github.com/nikolaAV/skeleton/tree/master/iterator_traits2)
 * [algorithm 'XOR cipher'. how to make overloads](https://github.com/nikolaAV/skeleton/tree/master/algorithm/simple_xor)

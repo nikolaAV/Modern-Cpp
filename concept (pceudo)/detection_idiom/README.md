@@ -36,19 +36,70 @@ In order to specify what requirements __Container__ type must meet we may expres
 template< typename Container, typename T>
 T accumulate( const Container& c, T init) {
    static_assert(is_range_v<Container>);
+   static_assert(is_assignable_v<Container,T>);
    return std::accumulate(std::begin(c),std::end(c),init);
 }
 ```
-where 'is_range_v' is a compile time trait which says whether the specified type T can be represented by pair of iterators pointing out the begining/the end of element sequence. 
-According to the Detection Idiom, the mentioned trait may be implemented like that
+where 
+- `is_range_v` is a compile time trait (boolean compiler time espression, predicate) which says whether the specified type T can be represented by pair of iterators pointing out the begining/the end of element sequence.
+- `is_assignable_v` is a compile time trait checking if container's element can be assigned to `init` value of type T
+
+According to the Detection Idiom, the mentioned traits may be implemented like that
 ```cpp
-template <typename T> 
-using begin_t  = decltype(std::begin(std::declval<T>()));
-template <typename T> 
-using end_t    = decltype(std::end(std::declval<T>()));
-template <typename T> 
-inline constexpr bool is_range_v = std::experimental::is_detected_v<begin_t,T> 
-                                && std::experimental::is_detected_v<end_t,T>;
+template <typename Container> 
+using begin_t  = decltype(std::begin(std::declval<Container>()));
+template <typename Container> 
+using end_t    = decltype(std::end(std::declval<Container>()));
+template <typename Container> 
+inline constexpr bool is_range_v = std::experimental::is_detected_v<begin_t,Container> 
+                                && std::experimental::is_detected_v<end_t,Container>;
+
+template <typename Container, typename T> 
+using assignable_t  = decltype(std::declval<T&>() = *std::begin(std::declval<Container>()));
+
+template <typename Container, typename T> 
+inline constexpr bool is_assignable_v  = is_detected_v<assignable_t,Container,T>;
+```
+
+## C++20
+how it can be implemented by means C++20?
+### the compile time trait (predicate) turns out concept 
+```cpp
+template <typename Container>
+concept Range = requires(Container& range) {
+    std::begin(range);
+    std::end(range);
+};
+
+template <typename T, typename U>
+concept Assignable = requires(T& left, U right) {
+    left = right;
+};
+
+template <typename Container, typename T>
+concept ElementAssignableTo = Range<Container> && requires(Container const& range) {
+    requires Assignable<T, decltype(*std::begin(range))>;
+};
+
+template <Range Container, typename T>
+    requires ElementAssignableTo<Container, T>
+T accumulate(Container const& c, T init) {
+    return std::accumulate(std::begin(c), std::end(c), init);
+}
+
+```
+
+### no manual code, std already has what we need 
+Following the rule [ES.1: Prefer the standard library to other libraries and to “handcrafted code”](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es1-prefer-the-standard-library-to-other-libraries-and-to-handcrafted-code) 
+finally the code can be shown as
+
+```cpp
+template <typename Container, typename T>
+    requires std::ranges::input_range<const Container> &&
+             std::assignable_from<T&, std::ranges::range_reference_t<const Container>>
+T accumulate(const Container& c, T init) {
+    return std::accumulate(std::ranges::begin(c), std::ranges::end(c), init);
+}
 ```
 
 ## Further informations
@@ -56,6 +107,7 @@ inline constexpr bool is_range_v = std::experimental::is_detected_v<begin_t,T>
 * [Detection Idiom - A Stopgap for Concepts](https://blog.tartanllama.xyz/detection-idiom/)
 * [`std::experimental::is_detected`](https://en.cppreference.com/w/cpp/experimental/is_detected)
 * [Expressive C++ Template Metaprogramming](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/) by Jonathan Boccara
+* [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 ## Related links
 * [iterator_type_traits](https://github.com/nikolaAV/skeleton/tree/master/iterator_traits2)
 * [algorithm 'XOR cipher'. how to make overloads](https://github.com/nikolaAV/skeleton/tree/master/algorithm/simple_xor)

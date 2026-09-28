@@ -9,4 +9,5 @@ TBD
 
 ## Related links
 * how did we live before [concept workaround in C++11](../concept%20(pceudo))
+* C++17 -> C++20 migration to concept [C++17 Detection Idiom, C++20 section](../concept%20(pceudo)/detection_idiom)
 * [for_each(typelist)](./for_each) compile time implementation to detect `std::optional<...>` items 
